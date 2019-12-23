@@ -17,6 +17,8 @@ You will then be presented with a form to fill out. I am initialising here with 
 
 ![create new repository](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/01_create_a_repo.JPG)
 
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/01_create_a_repo.JPG" width="50%">
+
 ## Testing everything is linked up
 
 On the VS Code side pannel you will see this when you have changes to commit.
