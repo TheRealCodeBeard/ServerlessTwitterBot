@@ -8,3 +8,7 @@ Code along instructions for building 'My first Twitter bot with Azure Serverless
 3. Open folder in VS Code
 4. Update README.md
 5. Check in change and sync (to check everything is connected as needed)
+
+# Details (where needed)
+## Step 5
+
