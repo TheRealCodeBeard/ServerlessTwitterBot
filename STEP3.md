@@ -77,5 +77,6 @@ Before we make any further changes we are going to check in the code to the repo
 
 Go to the source control <img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/05_Changes.JPG" alt="Changes made" width="30"> panel and check in your changes.
 
-<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/10_1_check_in" alt="Changes" width="50%">
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/10_1_check_in.JPG" alt="Changes" width="50%">
 
+Feel free to sync these changes if you like. You are then ready to go on to [Step 4](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP4.md)
