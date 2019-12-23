@@ -11,13 +11,31 @@ In this step you will create a GitHub repository (repo), open it in Visual Studi
 ## Create the repo
 In your GitHub account click 'New'. At the time of writing it looks like this. 
 
-![create new repository](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/00_create_a_repo.JPG)
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/00_create_a_repo.JPG" alt="create new repository" width="50%">
 
 You will then be presented with a form to fill out. I am initialising here with a Node .gitignore file as we will be writing in Node for this project. I have also asked for a README file. Everyone loves documentation!
 
-![create new repository](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/01_create_a_repo.JPG)
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/01_create_a_repo.JPG" alt="create new repository" width="50%">
 
-<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/01_create_a_repo.JPG" width="50%">
+You will end up with a vanilla repo that looks like this
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/02_the_repo.JPG" alt="the repository" width="50%">
+
+Clicking on the 'Clone or download' button will give you the various options for getting the repo linked locally.
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/03_clone_local.JPG" alt="clone locally" width="50%">
+
+You can clone local via the command line if you wish, I use GitHub Desktop because it's super easy. Clicking 'Open in Desktop' will make your browser try and open GitHub Desktop and this will result in this dialog.
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/04_github_desktop_clone.JPG" alt="GitHub Desktop Clone Local" width="50%">
+
+Choose where you want to work and click 'Clone'. Once you have done this you can close GitHub Desktop we won't need that any more. Maybe it would have been easier to use the command line after all?
+
+## Open the repo is VS Code
+
+In Visual Studio Code choose Open Folder and navigate to the folder of the cloned repo. 
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/05_open_in_vs_code.JPG" alt="GitHub Desktop Clone Local" width="50%">
 
 ## Testing everything is linked up
 
