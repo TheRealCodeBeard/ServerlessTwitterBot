@@ -37,20 +37,22 @@ In Visual Studio Code choose Open Folder and navigate to the folder of the clone
 
 <img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/05_open_in_vs_code.JPG" alt="GitHub Desktop Clone Local" width="30%">
 
-## Testing everything is linked up
+Make a change to the README.md file (remember this will be public). This can be anything. "Doing an amazing tutorial and had to make a change" would be an example of what you could right. When you have done this change and saved it on the VS Code side pannel you will a number on the source control section.
 
-On the VS Code side pannel you will see this when you have changes to commit.
-
-![random noise](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/05_Changes.JPG)
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/05_Changes.JPG" alt="Changes made" width="30%">
 
 Clicking on it brings up the source control pannel
 
-![random noise](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/05_2_Changes.JPG)
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/05_2_Changes.JPG" alt="Source control" width="30%">
 
-Use the command line if you like but you can also commit here
+Use the command line if you like but you can also commit here. Click the plus next to the files you want to add to the commit (or click the plus next to CHANGES to add them all)
 
-![random noise](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/05_3_Ready_to_commit.JPG)
+Then add a commit message and click the tick.
 
-On the bottom bar you will see the sync button showing how far you are ahead of the remote master
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/05_3_Ready_to_commit.JPG" alt="Ready to commit" width="30%">
 
-![random noise](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/04_VS_Code_Sync_Button.JPG)
+On the bottom bar you will see the sync button showing how far you are ahead of the remote master (the version of our code on GitHub). 
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/04_VS_Code_Sync_Button.JPG" alt="Ready to commit" width="30%">
+
+Click the two arrows in a circle next to the numbers and your code changes will be made available in the cloud version of the repo.
