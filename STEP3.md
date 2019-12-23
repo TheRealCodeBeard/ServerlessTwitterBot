@@ -16,3 +16,17 @@ You should see <img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBo
 I have redacted the subscription names I can see in the following screen grab. 
 
 <img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/Step3_functions.JPG" alt="Azure functions extension" width="50%">
+
+## Create a new project
+
+Select the subscription you wish to use and Click the New Project button.
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/06_create_function_project.JPG" alt="Azure functions extension" width="50%">
+
+If you can't see this. Mouse over the 'FUNCTIONS' pannel and it should appear.
+
+Next you will be taken through the steps to set up the projects. Remember this is being created locally so you won't be asked any Azure related questions yet.
+
+The first step is to choose the repo folder that we set up in [Step 1](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP1.md).
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/07_1_choose_your_repo_folder.JPG" alt="Azure functions extension" width="50%">
