@@ -1,7 +1,18 @@
 # ServerlessTwitterBot
 Code along instructions for building 'My first Twitter bot with Azure Serverless and GitHub Actions'.
 
-# Steps
+## Prerequisites
+
+To be able to build along with this tutorial you will need.
+
+1. An Azure account ([find out more](https://azure.microsoft.com/)).
+2. A GitHub account ([find out more](https://github.com/)).
+3. A Twitter account ([find out more](https://twitter.com)).
+4. Visual Studio Code ([find out more](https://code.visualstudio.com/)).
+5. Visual Studio Code Azure Functions Extension ([find out more](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)).
+6. Azure Functions code tools ([find out more](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local))/
+
+## Steps
 
 1. Set up GitHub Repo ([details](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP1.md))
 2. Install Functions Extension for VSCode
@@ -11,22 +22,4 @@ Code along instructions for building 'My first Twitter bot with Azure Serverless
 6. Set up GitHub Action
 7. Live Twitter Bot! 
 
-# Details (where needed)
-## Step 5
-
-On the VS Code side pannel you will see this when you have changes to commit.
-
-![random noise](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/05_Changes.JPG)
-
-Clicking on it brings up the source control pannel
-
-![random noise](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/05_2_Changes.JPG)
-
-Use the command line if you like but you can also commit here
-
-![random noise](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/05_3_Ready_to_commit.JPG)
-
-On the bottom bar you will see the sync button showing how far you are ahead of the remote master
-
-![random noise](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/04_VS_Code_Sync_Button.JPG)
 
