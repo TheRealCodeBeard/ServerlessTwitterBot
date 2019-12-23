@@ -3,11 +3,13 @@ Code along instructions for building 'My first Twitter bot with Azure Serverless
 
 # Steps
 
-1. Create GitHub Repository (repo)
-2. Clone repo
-3. Open folder in VS Code
-4. Update README.md
-5. Check in change and sync (to check everything is connected as needed)
+1. Set up GitHub Repo ([details](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP1.md)
+2. Install Functions Extension for VSCode
+3. Create function locally
+4. Push Function to Azure
+5. Build LogicApp
+6. Set up GitHub Action
+7. Live Twitter Bot! 
 
 # Details (where needed)
 ## Step 5
