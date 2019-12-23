@@ -1,4 +1,15 @@
 # Step 1: Set up GitHub Repository
+## What's this all about?
+In this step you will create a GitHub repository (repo), open it in Visual Studio Code and commit a change to the README file to make sure everything is working as intended.
+
+## Known gotchas
+
+1. At certain points you may need to authenticate if you haven't done a particular linking step before. This will require you to remember your password and/or use the MFA system in GitHub.
+
+2. I am showing screen grabs from the GitHub desktop app here. If you are more used to using the command line, please do as you see fit. The results will be the same. 
+
+## Create the repo
+
 
 ## Testing everything is linked up
 
