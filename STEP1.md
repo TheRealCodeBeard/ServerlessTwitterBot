@@ -11,11 +11,11 @@ In this step you will create a GitHub repository (repo), open it in Visual Studi
 ## Create the repo
 In your GitHub account click 'New'. At the time of writing it looks like this. 
 
-![create new repository](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/00_create_a_repo.JPG)
+![create new repository](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/00_create_a_repo.JPG =250x)
 
 You will then be presented with a form to fill out. I am initialising here with a Node .gitignore file as we will be writing in Node for this project. I have also asked for a README file. Everyone loves documentation!
 
-![create new repository](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/01_create_a_repo.JPG)
+![create new repository](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/01_create_a_repo.JPG =250x)
 
 ## Testing everything is linked up
 
