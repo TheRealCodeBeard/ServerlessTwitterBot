@@ -37,4 +37,22 @@ You will then be asked to select a language. You should choose the best language
 
 The next choice is the type of trigger you want for your Function. If you want to go more indepth on triggers you can find documentation [here](https://docs.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings). For the purpose of this tutorial, a trigger is how the Azure Function is called. We are are going to use the HTTP trigger so we can call our Function over the web.
 
-<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/07_3_choose_HTTP_trigger_.JPG" alt="Azure functions extension" width="50%">
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/07_3_choose_HTTP_trigger.JPG" alt="Azure functions extension" width="50%">
+
+You will now be asked to give your function a name. This will default to the type of trigger you used. It is at this point that you should give the function a sensible name that tells you something about what it does.
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/07_4_give_sensible_name.JPG" alt="Azure functions extension" width="50%">
+
+Now, you will have to forgive me here, this isn't a detailed security tutorial. So I will ask you to select Function level authorisation at this time. You can look up the different levels another time.
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/07_5_function_level_auth.JPG" alt="Azure functions extension" width="50%">
+
+You may remember that in [Step 1](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP1.md) we chose to add a .gitignore to our repo. Because of that the functions tooling will ask if you want to overwrite it. Hit yes. The functions tooling will add a whole bunch of files and things to ignore for you. Most of it you don't need to worry about now.
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/07_6_overwrite_gitignore.JPG" alt="Azure functions extension" width="50%">
+
+## The local Function project
+
+What will now appear in your Azure pannel is a local function project. The tooling will also open the index.js file for you.
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/08_1_LocalFunctionProject.JPG" alt="Azure functions extension" width="50%">
