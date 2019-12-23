@@ -56,3 +56,9 @@ On the bottom bar you will see the sync button showing how far you are ahead of 
 <img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/04_VS_Code_Sync_Button.JPG" alt="Ready to commit" width="30%">
 
 Click the two arrows in a circle next to the numbers and your code changes will be made available in the cloud version of the repo.
+
+## Check it is all there
+
+Navigate back to your repo in your browser and refreh the page. You should see the changes you made above reflected in the README.md file here. 
+
+When you are ready, move on to [Step 2](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP2.md)

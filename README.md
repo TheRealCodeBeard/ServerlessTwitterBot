@@ -15,7 +15,7 @@ To be able to build along with this tutorial you will need.
 ## Steps
 
 1. Set up GitHub Repo ([details](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP1.md))
-2. Install Functions Extension for VSCode
+2. Install Functions Extension for VSCode ([details](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP2.md))
 3. Create function locally
 4. Push Function to Azure
 5. Build LogicApp
