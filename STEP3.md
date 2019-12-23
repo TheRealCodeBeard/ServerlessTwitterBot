@@ -30,3 +30,11 @@ Next you will be taken through the steps to set up the projects. Remember this i
 The first step is to choose the repo folder that we set up in [Step 1](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP1.md).
 
 <img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/07_1_choose_your_repo_folder.JPG" alt="Azure functions extension" width="50%">
+
+You will then be asked to select a language. You should choose the best language, JavaScript. We will be using this for the rest of the tutorial. If you wish to use a different language, carry on - but if it all goes wrong, I can't help you. The amount of code in this tutorial is _minimal_ so don't get hung up on this point.
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/07_2_select_language.JPG" alt="Azure functions extension" width="50%">
+
+The next choice is the type of trigger you want for your Function. If you want to go more indepth on triggers you can find documentation [here](https://docs.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings). For the purpose of this tutorial, a trigger is how the Azure Function is called. We are are going to use the HTTP trigger so we can call our Function over the web.
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/07_3_choose_HTTP_trigger_.JPG" alt="Azure functions extension" width="50%">
