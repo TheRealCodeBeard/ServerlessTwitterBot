@@ -11,7 +11,7 @@ In this step you will install the Azure Functions extension for Visual Studio Co
 
 ## Azure Functions Extension
 
-In the prerequists there is a web link for the Azure Functions Extension. You can also install this from within VS Code. Click the button that looks like this <img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/Step2_extension.JPG" alt="extensions" width="30%"> on the side pannel and search for Azure Functions. You should find the extension that looks like this.
+In the prerequists there is a web link for the Azure Functions Extension. You can also install this from within VS Code. Click the button that looks like this <img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/Step2_extensions.JPG" alt="extensions" width="30%"> on the side pannel and search for Azure Functions. You should find the extension that looks like this.
 
 <img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/06_azure_functions_extension.JPG" alt="Azure functions extension" width="30%">
 
