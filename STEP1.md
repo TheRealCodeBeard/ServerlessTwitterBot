@@ -23,7 +23,7 @@ You will end up with a vanilla repo that looks like this
 
 Clicking on the 'Clone or download' button will give you the various options for getting the repo linked locally.
 
-<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/03_clone_local.JPG" alt="clone locally" width="50%">
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/03_clone_local.JPG" alt="clone locally" width="30%">
 
 You can clone local via the command line if you wish, I use GitHub Desktop because it's super easy. Clicking 'Open in Desktop' will make your browser try and open GitHub Desktop and this will result in this dialog.
 
@@ -35,7 +35,7 @@ Choose where you want to work and click 'Clone'. Once you have done this you can
 
 In Visual Studio Code choose Open Folder and navigate to the folder of the cloned repo. 
 
-<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/05_open_in_vs_code.JPG" alt="GitHub Desktop Clone Local" width="50%">
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/05_open_in_vs_code.JPG" alt="GitHub Desktop Clone Local" width="30%">
 
 ## Testing everything is linked up
 
