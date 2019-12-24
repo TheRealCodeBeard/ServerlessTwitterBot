@@ -107,3 +107,42 @@ GitHub helpfully presents a collection of standard workflow templates for you to
 ## The workflow YAML file
 
 You can find the workflow.yml file in this repo. [workflow.yml](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/workflow.yml). There are a few pieces of this you will need to update to relate to your functions app. 
+
+You can copy and paste the workflow.yml file linked above into the Edit new file window GitHub will be showing after clicking the 'Set up a workflow yourself' button above. You will see that in the path section we are in the .github/workflows folder editing a file called 'main.yml'. GitHub has helpfully put the file in the right place for us!
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/18_2_commit_workflow_file.JPG" alt="Editing" width="75%">
+
+Before you commit this file and, basically, make your action live, you will need to make the following changes:
+
+`name:` at the tip. Give your action a sensible name.
+
+The next part can be read as a sentence 'on push brances master'. This is when your action will trigger.
+
+`FUNC_APP_NAME:` you need to set this to be the Function App Name. This is the same as we used in the Service Principle. The URL safe version of the name of the Function App we created.
+
+The jobs section all realte to what we want the action to do. It's very human readable and means what it says.
+
+'runs on windows latest' for example. 
+
+'steps' are the things the aciton will do.
+- Check out master
+- Log in to azure. Notice here how `creds` is set to `${{ secrets.AZURE_CREDENTIALS_WIN }}`. This is how, in an Actions YAML file you refer to the secret created earlier. If you changed the Secret name, you will need to update that here.
+- Set node version. Remember how we chose Node 10.x when we set up the Function App originally? Well, this version must match!
+- NPM Install and build. This contains a set of command for the Node Package Manager (NPM) to make sure all of our dependancies are used. In our simple case we don't have any dependancies ... so that is OK then.
+- The last step the `FUNC_APP_NAME` we set above to tell the Action which function app we are deploying too.
+
+So as long as you have set up your Function App Name and Secret correctly, that is all you need to do.
+
+Click the 'Start commit' button and fill in your commit message and push. (Yes, in the GitHub portal).
+
+Because you just pushed a commit, the Action will run. 
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/18_4_workflow_running_post_commit.JPG" alt="Running" width="75%">
+
+Wait and see what happens, it should succeed. You should see the steps that were laid out in the YAML file we just created.
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/18_6_success.JPG" alt="Success" width="75%">
+
+## Code change 2
+
+TODO
