@@ -106,3 +106,13 @@ What you will notice here is that you are authorising 'Microsoft Azure Logic App
 <img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/14_9_twitter_ready.JPG" alt="Authorised Twitter" width="75%">
 
 When you have successfully authorised, your 'Post a tweet' action will look like this. Notice that at the bottom it tells you which connection is being used. 
+
+Click on 'Add new parameter' and choose 'Tweet text'. You could just type a message here, but we are going to use the text our Function generates.
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/14_10_body_of_http.JPG" alt="Dynamic content" width="75%">
+
+Add dynmaic content and select the 'body' of your HTTP action. Remember how we gave it a sensible name above? Well that is now the name you are looking for. Click 'show more' next to it and choose 'Body'. Remember how the _body_ is what we set in the Function and we _get_ that _body_ in the HTTP action.
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/14_11_ready" alt="Dynamic content" width="75%">
+
+We are now ready to Tweet!
