@@ -39,7 +39,7 @@ The extension will set up all the stuff and tell you when it's done.
 
 If you log into the [Azure Portal](https://portal.azure.com) and you select your resource groups list <img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/azure_resource_groups.JPG" alt="Version it" width="50"> you will find one with a similar name to your Function App. You will see in the screen grab below that mine is called 'nonsensegeneratorfunctio' it has been made all lower case and truncated in length.
 
-<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/11_1_what_is_in_azure_rg.JPG" alt="Version it" width="75d%">
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/11_1_what_is_in_azure_rg.JPG" alt="Version it" width="75%">
 
 You should see a list similar to the above in your resource group. An instance of Application Insights and a Storage account with a similar name to the resource group. An App Service containing your Function App and an App Service Plan related to the region you picked. 
 
