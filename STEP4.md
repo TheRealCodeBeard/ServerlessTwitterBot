@@ -91,5 +91,14 @@ module.exports = async function (context, req) {
 };
 ```
 
-The changes here simplify the function right down to just returning the words `Bibble wibble wobble` (such fun, much quirky). This function isn't actually useful for anything right now but it makes a useful point later. 
+The changes here simplify the function right down to just returning the words `Bibble wibble wobble` (such fun, much quirky). The line `context.log('Generating Nonsense...');` logs a messaage internally to the Function App. 
+
+```
+context.res = {
+    body: "Bibble wibble wobble"
+};
+```
+Sets the `body` of the function return to be the words `Bibble wibble wobble`. If you are familiar with JavaScript syntax this should be all very straight forward. If you are not, then please take a moment to spot where `context` comes from and understand that `.res` is short for 'response'. The 'body' of a response is the text that is returned when the function is called.
+
+This function isn't actually useful for anything right now but it makes a useful point later. 
 
