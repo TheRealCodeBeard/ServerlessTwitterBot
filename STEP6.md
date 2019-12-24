@@ -141,7 +141,7 @@ Because you just pushed a commit, the Action will run.
 
 Wait and see what happens, it should succeed. You should see the steps that were laid out in the YAML file we just created.
 
-<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/18_6_success.JPG" alt="Success" width="75%">
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/18_6_success.JPG" alt="Success" width="50%">
 
 ## Code change 2
 
