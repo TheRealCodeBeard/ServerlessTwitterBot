@@ -21,7 +21,7 @@ In Azure click the Cloud Shell button in the top bar of the portal (next to the 
 
 Click this button and Cloud Shell will load at the bottom of the portal window. When this has finished you will end up with a cursor on a command line.
 
-There are detailed instructions on the [GitHub](https://github.com/Azure/functions-action#using-azure-service-principle-for-rbac-as-deployment-credential) page relating to Service Principals. That you can read up on further should you wish to.
+There are detailed instructions on the [GitHub page relating to Service Principals](https://github.com/Azure/functions-action#using-azure-service-principle-for-rbac-as-deployment-credential). That you can read up on further should you wish to.
 
 The template for the command you will be using is as follows
 
@@ -93,3 +93,14 @@ When you have done this, the secret is locked and you can only 'Remove' it. It's
 <img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/17_4_secret_added.JPG" alt="Secret added" width="75%">
 
 This was the most complicated bit of our whole process. If you have made it this far ... it's all plain sailing from here on in.
+
+## Adding the GitHub Action
+
+Breath in deeply and let it out slowly. We are almost at the end and what you are about to have available is a great Serverless platform to build all kinds of fun things!
+
+Click on the Actions tab in your GitHub repository.
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/18_1_add_action.JPG" alt="Actions" width="75%">
+
+GitHub helpfully presents a collection of standard workflow templates for you to use. For today we are going to skip this and click 'Set up a workflow yourself' in the top right. The awesome [Ben](https://github.com/benc-uk) has kindly provided a template for us to use. The GitHub actions platform is so rich that taking you through every part would just take too long. So I am short cutting it to the one template for this tutorial.
+
