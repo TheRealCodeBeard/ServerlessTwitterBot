@@ -21,18 +21,18 @@ Go to your resource group (the one created in [Step 4](https://github.com/TheRea
 
 In the 'Search the Marketplace' bar at the top of the 'New' panel type `Logic App` and click the matching search result. You will then be presented with a page with this at the top.
 
-<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/13_1_create_logic_app.JPG" alt="Version it" width="75%">
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/13_1_create_logic_app.JPG" alt="Create logic app" width="75%">
 
 Click 'Create' and you will get presented with the creation form.
 
-<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/13_2_create_logic_app.JPG" alt="Version it" width="75%">
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/13_2_create_logic_app.JPG" alt="Fill in the form" width="75%">
 
 Give the Logic App a sensible name, make sure you are in the intended subscription, make sure to 'Use existing' Resource Group and select the one we created for this project. Choose the same region as you have been using all along and leave Log Analytics off for now. 
 
 Then click 'Create' at the bottom. This will send Azure off to create that for you. When it is done you should see the Logic App in your resource group.
 
-<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/13_3_in_resource_group.JPG" alt="Version it" width="75%">
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/13_3_in_resource_group.JPG" alt="Find it in the resource group" width="75%">
 
 Click on that and you will get presented with the 'First view' Logic Apps Designer panel. Click on 'Recurrence' in the 'Start with a common trigger' section.
 
-<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/13_4_click_recurance.JPG" alt="Version it" width="75%">
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/13_4_click_recurance.JPG" alt="Make it trigger with recurance" width="75%">
