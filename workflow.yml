@@ -1,0 +1,36 @@
+name: Deploy Nonsense Generator Function
+
+on:
+  push:
+    branches:
+    - master
+env:
+  FUNC_APP_NAME: nonsensegeneratorfunctionapp
+
+jobs:
+  build-and-deploy:
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@master
+      
+    - name: 'Login via Azure CLI'
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS_WIN }}
+      
+    - name: 'Set Node version'
+      uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+
+    - name: 'NPM install/build'
+      run: |
+        npm install
+        npm run build --if-present
+        npm run test --if-present
+        
+    - uses: Azure/functions-action@v1
+      with:
+        app-name: ${{ env.FUNC_APP_NAME }}
+        package: '.'  

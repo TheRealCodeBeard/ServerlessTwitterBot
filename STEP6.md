@@ -104,3 +104,6 @@ Click on the Actions tab in your GitHub repository.
 
 GitHub helpfully presents a collection of standard workflow templates for you to use. For today we are going to skip this and click 'Set up a workflow yourself' in the top right. The awesome [Ben](https://github.com/benc-uk) has kindly provided a template for us to use. The GitHub actions platform is so rich that taking you through every part would just take too long. So I am short cutting it to the one template for this tutorial.
 
+## The workflow YAML file
+
+You can find the workflow.yml file in this repo. [workflow.yml](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/workflow.yml). There are a few pieces of this you will need to update to relate to your functions app. 
