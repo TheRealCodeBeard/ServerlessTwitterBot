@@ -113,6 +113,6 @@ Click on 'Add new parameter' and choose 'Tweet text'. You could just type a mess
 
 Add dynmaic content and select the 'body' of your HTTP action. Remember how we gave it a sensible name above? Well that is now the name you are looking for. Click 'show more' next to it and choose 'Body'. Remember how the _body_ is what we set in the Function and we _get_ that _body_ in the HTTP action.
 
-<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/14_11_ready" alt="Dynamic content" width="75%">
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/14_11_ready.JPG" alt="Ready!" width="75%">
 
 We are now ready to Tweet!
