@@ -41,6 +41,8 @@ Click on 'Recurrence' in the 'Start with a common trigger' section.
 
 <img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/13_4_click_recurance.JPG" alt="Make it trigger with recurance" width="75%">
 
+## Recurrence
+
 This will take you to the full Designer view. With the Recurrence node open.
 
 <img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/14_1_recurance.JPG" alt="Recurrence settings" width="75%">
@@ -50,6 +52,8 @@ In this example I have set it to trigger once every hour. It's really up to you 
 1. Your audience on Twitter. Is you bot going to be so interesting that people want to see it's tweet more than once an hour?
 
 2. Cost. If you are calling your Function on a consumption plan, how much are you going to spend calling it once every 30 seconds? Best to slow it down. We can always trigger the Logic App manually to test it.
+
+## Call your Function
 
 Click the '+ New step' button and search for an HTTP step.
 
@@ -79,4 +83,26 @@ Use the '...' menu to Rename it something useful (you will be glad you did later
 
 <img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/14_4_2_http_rename.JPG" alt="Rename" width="75%">
 
+## Sending to the Twitters
 
+Add a step and search for 'Twitter'
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/14_5_twitter.JPG" alt="Twitter" width="75%">
+
+Choose the 'Post a twet' action.
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/14_6_post_a_tweet.JPG" alt="Post a tweet" width="75%">
+
+You will then be prompted to 'Sign in', do that
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/14_7_sign_in.JPG" alt="Sign in" width="75%">
+
+This brings up a seperate browser window (depending on many things, this might appear behind your current browser window, keep an eye out for that).
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/14_8_twitter_auth.JPG" alt="Sign in" width="75%">
+
+What you will notice here is that you are authorising 'Microsoft Azure Logic Apps' to access the Twitter account - not a custom app that belongs to the Twitter account. At the bottom you will see all the authorisations you are making. These relate to all the things Logic Apps can automate for you. Authorising Logic Apps is far easier than building and authorising your own app to access the Twitter API for you.
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/14_9_twitter_ready.JPG" alt="Authorised Twitter" width="75%">
+
+When you have successfully authorised, your 'Post a tweet' action will look like this. Notice that at the bottom it tells you which connection is being used. 
