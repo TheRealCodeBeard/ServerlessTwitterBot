@@ -71,3 +71,25 @@ Click the Get function URL button that is next to the Run button on the code pag
 
 This gives you a choice of key (leave this as 'default (Function Key)' for now) and the URL. The box is small so you can't see the full extent of the URL here. It includes the authorisation key in a url parameter called 'code'. Click the copy button and open a new tab in your browser.
 
+Remember ... you will need to add `&name=something` to the URL otherwise the default function will complain. 
+
+## Code change 1.
+
+Here is the first of two actual code changes you are going to make. And this is the first time you are going to test what you have learnt. 
+
+- Go back to Visual Studio Code. 
+- Find the index.js file in the Function folder. This was the one that was automatically opened in [Step 3](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP3.md) if you haven't been proactively closing stuff it should still be open.
+
+Replace the whole file with this.
+
+```javascript
+module.exports = async function (context, req) {
+    context.log('Generating Nonsense...');
+    context.res = {
+        body: "Bibble wibble wobble"
+    };
+};
+```
+
+The changes here simplify the function right down to just returning the words `Bibble wibble wobble` (such fun, much quirky). This function isn't actually useful for anything right now but it makes a useful point later. 
+
