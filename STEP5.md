@@ -21,11 +21,11 @@ Go to your resource group (the one created in [Step 4](https://github.com/TheRea
 
 In the 'Search the Marketplace' bar at the top of the 'New' panel type `Logic App` and click the matching search result. You will then be presented with a page with this at the top.
 
-<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/13_1_create_logic_app.JPG" alt="Create logic app" width="50%">
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/13_1_create_logic_app.JPG" alt="Create logic app" width="30%">
 
 Click 'Create' and you will get presented with the creation form.
 
-<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/13_2_create_logic_app.JPG" alt="Fill in the form" width="50%">
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/13_2_create_logic_app.JPG" alt="Fill in the form" width="30%">
 
 Give the Logic App a sensible name, make sure you are in the intended subscription, make sure to 'Use existing' Resource Group and select the one we created for this project. Choose the same region as you have been using all along and leave Log Analytics off for now. 
 
