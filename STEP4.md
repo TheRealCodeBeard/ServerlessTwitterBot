@@ -39,13 +39,13 @@ The extension will set up all the stuff and tell you when it's done.
 
 If you log into the [Azure Portal](https://portal.azure.com) and you select your resource groups list <img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/azure_resource_groups.JPG" alt="Version it" width="50"> you will find one with a similar name to your Function App. You will see in the screen grab below that mine is called 'nonsensegeneratorfunctio' it has been made all lower case and truncated in length.
 
-<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/11_1_what_is_in_azure_rg.JPG" alt="Version it" width="50%">
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/11_1_what_is_in_azure_rg.JPG" alt="Version it" width="75d%">
 
 You should see a list similar to the above in your resource group. An instance of Application Insights and a Storage account with a similar name to the resource group. An App Service containing your Function App and an App Service Plan related to the region you picked. 
 
 For this tutorial you will only need to worry about the App Service containing your Function App. So go ahead and click on this now.
 
-<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/11_2_function_app.JPG" alt="Version it" width="50%">
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/11_2_function_app.JPG" alt="Version it" width="75%">
 
 It should look something like this. In the Overview pannel you will see various control buttons, a status (that should be 'Running') some subscription and resource group details and the URL. This URL is important for two reasons. 
 
@@ -55,11 +55,11 @@ It should look something like this. In the Overview pannel you will see various 
 
 On the left hand pannel, expand the Function App and list of functions and click on the name of your actual Function you will see the boiler plate code. 
 
-<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/11_2_function_app_expand.jpg" alt="Version it" width="50%">
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/11_2_function_app_expand.jpg" alt="Version it" width="30%">
 
 You will also see a message that tells you your app is read only.
 
-<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/11_2_function_app_readonly.JPG" alt="Version it" width="50%">
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/11_2_function_app_readonly.JPG" alt="Version it" width="75%">
 
 This is due to the method of release we have used. We have released from Visual Studio Code. It is possible to write the Function directly in the Azure Portal. I wouldn't recomend this for anything other than testing or noodling about.
 
