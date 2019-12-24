@@ -37,7 +37,7 @@ The extension will set up all the stuff and tell you when it's done.
 
 ## What gets created on Azure?
 
-If you log into the [Azure Portal](https://portal.azure.com) and you select your resource groups list <img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/azure_resource_groups.JPG" alt="Version it" width="30"> you will find one with a similar name to your Function App. You will see in the screen grab below that mine is called 'nonsensegeneratorfunctio' it has been made all lower case and truncated in length.
+If you log into the [Azure Portal](https://portal.azure.com) and you select your resource groups list <img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/azure_resource_groups.JPG" alt="Version it" width="50"> you will find one with a similar name to your Function App. You will see in the screen grab below that mine is called 'nonsensegeneratorfunctio' it has been made all lower case and truncated in length.
 
 <img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/11_1_what_is_in_azure_rg.JPG" alt="Version it" width="50%">
 
