@@ -107,8 +107,10 @@ Then complete the following steps that we have been over before.
 - Check in your changes. Covered in [Step 1](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP1.md)
 - Push the change to GitHub. Covered in [Step 1](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP1.md)
 - Deploy the function to Azure. Covered in this step.
-- Test your function in a browser.
+- Test your function in a browser. Covered in this step.
 
 You should end up with something that looks like this.
 
 <img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/11_5_web.JPG" alt="Version it" width="75%">
+
+When you are ready, move on to [Step 5](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP5.md).
