@@ -99,7 +99,7 @@ You will then be prompted to 'Sign in', do that
 
 This brings up a seperate browser window (depending on many things, this might appear behind your current browser window, keep an eye out for that).
 
-<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/14_8_twitter_auth.JPG" alt="Sign in" width="75%">
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/14_8_twitter_auth.JPG" alt="Twitter auth" width="30%">
 
 What you will notice here is that you are authorising 'Microsoft Azure Logic Apps' to access the Twitter account - not a custom app that belongs to the Twitter account. At the bottom you will see all the authorisations you are making. These relate to all the things Logic Apps can automate for you. Authorising Logic Apps is far easier than building and authorising your own app to access the Twitter API for you.
 
