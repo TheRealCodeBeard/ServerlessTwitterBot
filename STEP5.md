@@ -116,3 +116,48 @@ Add dynmaic content and select the 'body' of your HTTP action. Remember how we g
 <img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/14_11_ready.JPG" alt="Ready!" width="75%">
 
 We are now ready to Tweet!
+
+## Lets make a Tweet!
+
+In the top bar, click Save and then Run
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/15_1_save_then_run.JPG" alt="Save and Run" width="75%">
+
+Go back to the Overview panel of the Logic App and look at the bottom at Runs history. Click on your latest run (There should only be one, and it should say 'Succeeded').
+
+When you click you should see this in the loaded panel
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/16_1_Success.JPG" alt="Success" width="75%">
+
+If you now go to your connected Twitter account you should see the Tweet.
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/16_1_Tweeted.JPG" alt="Success" width="75%">
+
+## OH NO!
+
+If you run the Logic App again, this will happen.
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/16_3_oh_no.JPG" alt="Success" width="75%">
+
+If you click on the 'Post a tweet' action you will see what the error is.
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/16_4_the_error.JPG" alt="Success" width="75%">
+
+Twitter doesn't allow you to post the same tweet twice. The message about the error comes back in the Body field of the Outputs box.
+
+Why has this happened? 
+It is because our Function only returns one thing. We will have to go and change that. But first go back to the overview panel for the Logic App anc click 'Disable'. 
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/16_5_disable.JPG" alt="Success" width="75%">
+
+This means that the Recurrence trigger won't run every hour. We can enable this again when we have fixed our problem.
+
+We have made a small code change before. When we did this we had to check the code in and then deploy to Azure manually. This is problematic for several reasons:
+
+1. It's extra work. We want to focus on the important and interesting pieces of our code, not doing repetitive and boring steps.
+
+2. It makes is hard to work as a team. As we all know _Teamwork makes the dream work_. We want to enable multiple developers to collaborate through source control on the code of our Functions.
+
+3. DevOps is cool, we want some of that. We don't have it right now. We want, what is known as, CI/CD (Continuous Integration/Continuous Deployment). This is where any code change is integrated into the overall system and deployed as quickly as possible.
+
+Lets learn how in [Step 6](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP6.md).
