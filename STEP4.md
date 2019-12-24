@@ -102,3 +102,13 @@ Sets the `body` of the function return to be the words `Bibble wibble wobble`. I
 
 This function isn't actually useful for anything right now but it makes a useful point later. 
 
+Then complete the following steps that we have been over before.
+
+- Check in your changes. Covered in [Step 1](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP1.md)
+- Push the change to GitHub. Covered in [Step 1](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP1.md)
+- Deploy the function to Azure. Covered in this step.
+- Test your function in a browser.
+
+You should end up with something that looks like this.
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/11_5_web.JPG" alt="Version it" width="50%">
