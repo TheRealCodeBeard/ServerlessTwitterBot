@@ -111,4 +111,4 @@ Then complete the following steps that we have been over before.
 
 You should end up with something that looks like this.
 
-<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/11_5_web.JPG" alt="Version it" width="50%">
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/11_5_web.JPG" alt="Version it" width="75%">
