@@ -59,7 +59,7 @@ On the left hand pannel, expand the Function App and list of functions and click
 
 You will also see a message that tells you your app is read only.
 
-<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/11_2_function_app_readonly.JPG" alt="Version it" width="75%">
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/11_2_function_app_readonly.JPG" alt="Version it" width="100%">
 
 This is due to the method of release we have used. We have released from Visual Studio Code. It is possible to write the Function directly in the Azure Portal. I wouldn't recomend this for anything other than testing or noodling about.
 
