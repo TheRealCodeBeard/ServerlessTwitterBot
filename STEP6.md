@@ -172,7 +172,7 @@ _Commit that change_ and then sync the repository with GitHub.
 Go to GitHub and watch the action complete.
 Then load your function via the URL as we did before.
 
-<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/19_4_new_web.JPG" alt="Success" width="50%">
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/19_4_new_web.JPG" alt="Success" width="75%">
 
 You should see that it now shows the Date and Time.
 
