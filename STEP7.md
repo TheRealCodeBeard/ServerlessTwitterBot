@@ -192,6 +192,8 @@ So, you can ML too!
 
 #### Natural Language Generation specifically
 
+[Natural Language Generation](https://en.wikipedia.org/wiki/Natural-language_generation) is an interesting area. Some would say, we don't understand enough about how meaning is caused by language to bother with anything other than templating for now. But let's have some fun with what we can do...
+
 A very simple technique for Natural Language Generation uses a simple version of a [Markov Chain](https://en.wikipedia.org/wiki/Markov_chain). How does this work?
 
 **First** of all you will need a [repository](http://www.gutenberg.org/) of text to work with. I have provided a [text file](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/some_text.js) in this repo. 
