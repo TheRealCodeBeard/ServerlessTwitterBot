@@ -1,6 +1,9 @@
 # ServerlessTwitterBot
 Code along instructions for building 'My first Twitter bot with Azure Serverless and GitHub Actions'.
 
+## What this is for.
+The focus of this walk through is to guide you through the process of setting up a Twitter bot with Azure Serverless and GitHub actions from a _standing start_ to full 'Continuous Delivery' (CD). Because the focus is on CD we will start with setting up the code repository in GitHub. We will then move on to creating the Azure Function in code making sure we have everything connected to Azure. We will then test the Logic App for posting to Twitter and then create the CD Action in GitHub. At the end you will have a foundation for which to continue on to either build out the Twitter Bot or use a CD methodology on future projects with Azure Functions and GitHub actions.  
+
 ## Who is this for?
 
 ### Primary Audience 
