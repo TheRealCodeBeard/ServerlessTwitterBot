@@ -38,4 +38,4 @@ To be able to build along with this tutorial you will need.
 
 We are looking to create this...
 
-<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/architecture.JPG" alt="architecture diagram" width="50%">
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/architecture.JPG" alt="architecture diagram">
