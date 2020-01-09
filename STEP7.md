@@ -27,6 +27,12 @@ When that has run (it should succeed) navigate to the Twitter account you are tw
 
 **SUCCESS!** You now have a fully CI/CD Node.js based Twitter bot!
 
+---------------------------------------------------------------------------------------
+
+## THE MAIN WALK THROUGH FINISHES HERE WHAT FOLLOWS ARE EXTENSIONS AND STRETCH PROJECTS
+
+---------------------------------------------------------------------------------------
+
 ## Generating content automatically.
 
 _Be Warned, this is a rabbit hole of fun. Many hours can be spent working out what to do with automatically generated content. Especially when Machine Learning gets involved._
@@ -175,6 +181,18 @@ describe_weather('London',my_app_id);
 ```
 
 ### Example 5: MACHINE LEARNING
+
+JavaScript is not the first language most think of when it comes to Machine Learning. However, NPM usually provides something useful. For example ...
+
+[natural](https://www.npmjs.com/package/natural) is a package crammed full of useful Natural Language Processing tools. This even includes some ML based [classifiers](https://www.npmjs.com/package/natural#bayesian-and-logistic-regression) which learn how to classify your text. Maybe you could use this to classify the statements generated and use that to generate something else?
+
+[node-kmeans](https://www.npmjs.com/package/node-kmeans) is a package to do [K-Means](https://en.wikipedia.org/wiki/K-means_clustering) clustering in JavaScript. Very cool! And there is a bit of [regression](https://www.npmjs.com/package/regression) here.
+
+So, you can ML too!
+
+A very simple technique for Natural Language Generation uses a simple version of a [Markov Chain](https://en.wikipedia.org/wiki/Markov_chain). How does this work? 
+
+First of all you will need a [repository](http://www.gutenberg.org/) of text to work with. I have provided a [text file](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/some_text.js) in this repo. 
 
 TODO
 
