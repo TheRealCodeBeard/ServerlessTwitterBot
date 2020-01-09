@@ -26,28 +26,28 @@ To be able to build along with this tutorial you will need.
 
 ## Steps
 
-1. Set up GitHub Repo ([details](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP1.md)). 
+1. **Set up GitHub Repo** ([details](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP1.md)). 
 
     This is the repository for the project. It is where the code will be stored but also where the CI/CD GitHub actions will run. 
 
-2. Install the Functions Extension for VSCode ([details](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP2.md)). 
+2. **Install the Functions Extension for VSCode** ([details](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP2.md)). 
 
     This extension allows you to easily work with Azure Functions from within VSCode.
 
-3. Create the Function locally ([details](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP3.md)). In this step we learn how we can test everything works without having to use the cloud. It shortens the development cycle feedback loop.
+3. **Create the Function locally** ([details](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP3.md)). In this step we learn how we can test everything works without having to use the cloud. It shortens the development cycle feedback loop.
 
-4. Push the Function to Azure ([details](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP4.md)). 
+4. **Push the Function to Azure** ([details](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP4.md)). 
 
     In this step we make the function live so it can be used by the Logic App.
 
-5. Build the Logic App ([details](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP5.md)). 
+5. **Build the Logic App** ([details](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP5.md)). 
 
     In this step we learn how to use Logic App to automate the calling of our Function without code.
 
-6. Set up a GitHub Action ([details](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP6.md)). 
+6. **Set up a GitHub Action** ([details](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP6.md)). 
 
     In this step we learn how to set up a GitHub action in our repo from step 1 to automate the release of our code.
-7. Live Twitter Bot! (details)
+7. **Live Twitter Bot!** (details)
 
 ## Architecture
 
