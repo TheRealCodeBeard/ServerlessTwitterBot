@@ -194,7 +194,12 @@ A very simple technique for Natural Language Generation uses a simple version of
 
 First of all you will need a [repository](http://www.gutenberg.org/) of text to work with. I have provided a [text file](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/some_text.js) in this repo. 
 
-TODO
+I will continue this section [in the comments of this javascript file](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/simple_markov.js).
+
+The simple Markov method will generally generate nonsense. It's fun though.
+Using all these different ML techniques _combined_ with templating and random generation and explicit logic gives the best results currently. 
+
+Or you could consider...
 
 ### Example 6: DEEP LEARNING
 
