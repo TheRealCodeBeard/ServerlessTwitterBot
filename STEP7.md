@@ -102,15 +102,82 @@ This wonderful book symbolised happiness.
 This wonderful fish symbolised joy.
 ```
 
+At first, this may seem simplistic - and the example is. However, when you start to include more complex logic and external data sources you can get some suprisingly interesting results. Maybe you could build your own [Fantasy Name Generator](https://www.ecosia.org/search?q=fantasy+name+generator);
+
 When you are generating random text for Twitter you have to make sure that...
 1. It is shorter than the maxumum tweet length. 
 2. It has not been tweeted before.
-3. You won't accidentally tweet something you will regret. You are responsible for the account, not your code.
+3. You won't accidentally tweet something you will regret. You are responsible for the Twitter account, you can't blame your code!
 
-### Example 4: MACHINE LEARNING
+### Example 4: WEATHER
+
+Following on from the above example and still in the [generator.js](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/generator.js) file we can see the same technique being used to describe weather in a fun way. In this example I am using the [Open Weather Map](https://openweathermap.org/) API to get data. You will need a key from them to make this work. You need to be careful not to put that key into your repo!
+
+To make the call to the API you will need the `https` pacakage in your script. This comes as standard with node.
+
+```javascript 
+let https = require('https'); 
+```
+
+You should then put your key for openweathermap.org here
+
+```javascript
+let my_app_id = "<your_app_id_from_openweathermap.org>";
+```
+
+This is function that describes the weather. You will notice I have use `choose_from` to give it some variation.
+
+```javascript
+let describe_weather = function(where,appid){
+    //This is the URL for the location search weather information
+    let weather_api = `https://samples.openweathermap.org/data/2.5/weather?q=${where}&appid=${appid}`;
+
+    //These are my libraries for the generated part
+    let warm_things = ['a coat','your hat and gloves','something warm','scarf'];
+    let cold = ['cold','freezing','nippy','wintery','chilly'];
+    let liquid = ['water','liquids','fluids'];
+
+    //This function uses the libraries and the kelvin temperature to generate a sentence.
+    let describe_temp = function(kelvin){
+        if(kelvin<273.15) return `it is ${choose_from(cold)} out there`;
+        else if (kelvin<283.15) return `take ${choose_from(warm_things)}`;
+        else if (kelvin<293.15) return 'layers would be a good idea';
+        else if (kelvin<303.15) return 'it is quite pleasant';
+        else if (kelvin<313.15) return `drink plenty of ${choose_from(liquid)}`;
+        else return 'I would probably stay in side';
+    };
+
+    //This method takes the weather data and generates the full description.
+    let process_weather = function(weather_results){
+        let description = weather_results.weather[0].description;//Here I am reading what we got back from the API
+        let temp = weather_results.main.temp;//And the temperature
+        let temp_describe = describe_temp(temp);
+        let generated_description = `Today in ${where} there is ${description}. It is ${temp} kelvin, ${temp_describe}.`;
+        console.log(generated_description);
+    };
+    
+    //This calls the API and constructs it's answer.
+    https.get(weather_api,response=>{
+        var body = '';
+        response.on('data', function(d) {
+            body += d;
+        });
+        response.on('end', function() {
+            process_weather(JSON.parse(body));
+        });
+    });
+};
+
+//If you are going to use this in an Azure Function you need to deal with it's asynchonous nature
+//This would involve putting the RESPONSE construction in the process_weather function.
+describe_weather('London',my_app_id);
+
+```
+
+### Example 5: MACHINE LEARNING
 
 TODO
 
-### Example 5: DEEP LEARNING
+### Example 6: DEEP LEARNING
 
 TODO
