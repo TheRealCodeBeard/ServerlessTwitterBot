@@ -31,9 +31,23 @@ When that has run (it should succeed) navigate to the Twitter account you are tw
 
 _Be Warned, this is a rabbit hole of fun. Many hours can be spent working out what to do with automatically generated content. Especially when Machine Learning gets involved._
 
+### Example 1
+
 I have created an 'advanced' Twitter bot called [@maps_pixel](https://twitter.com/maps_pixel). This uses the [canvas](https://www.npmjs.com/package/canvas) package to create pixel-art images of maps that use [cellular automata](https://en.wikipedia.org/wiki/Cellular_automaton) type functions to generate the map data. This was inspired by the [Forest-Fire model](https://en.wikipedia.org/wiki/Forest-fire_model). Can find the repo of code [here](https://github.com/TheRealCodeBeard/gentown).
 
 They look like this ...
+
 <img src="https://github.com/TheRealCodeBeard/gentown/blob/master/images/map.png" alt="Map">
 
+### Example 2
+
+If you chose to explore the above twitter account you may notice that the bot also generates a description of the map. 
+
+```
+Welcome to Weatherpiddlepool (Population 60,456).
+'Prince Zuna McKilama' died in 892 at the age of 85, since then this shocking place has seen far-reaching plague.
+Forgotten for their theatre, the Klaoffosama elders are often described as revolting.
+```
+
+You will notice that this is high grade social media nonsense!
 
