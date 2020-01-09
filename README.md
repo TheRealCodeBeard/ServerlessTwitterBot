@@ -34,4 +34,8 @@ To be able to build along with this tutorial you will need.
 6. Set up a GitHub Action ([details](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP6.md))
 7. Live Twitter Bot! (details)
 
+## Architecture
 
+We are looking to create this...
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/architecture.JPG" alt="architecture diagram" width="50%">
