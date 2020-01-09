@@ -25,6 +25,7 @@ To be able to build along with this tutorial you will need.
 4. **Visual Studio Code** ([find out more](https://code.visualstudio.com/)).
 5. **Visual Studio Code Azure Functions Extension** ([find out more](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)).
 6. **Azure Functions core tools** ([find out more](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local)).
+7. **Node.js** ([find out more](https://nodejs.org/)). This walk through can be completed with any language that Azure Functions supports but I will be useing Node.js because JavaScript is my favourite. There is extremly minimal actual code in the main body of this walk through. So if you are not a confident coder, never fear!
 
 ## Steps
 
