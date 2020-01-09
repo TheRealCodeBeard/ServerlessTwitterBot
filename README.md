@@ -8,6 +8,8 @@ Those with some development experience. You have an idea about what Serverless i
 
 For this audience, this walk through will be 'straight forward' but will give you a thin slice through the full stack to a live result.
 
+Each step has a TL;DR step for you at the top if you know how to do these things.
+
 ### Secondary Audience
 Those who are early in the code/tech/cloud journey and want to stretch themselves on a project that allows them to experience cloud native low-code/no-code tools for the automation of tasks - such as posting on Social Media.
 
