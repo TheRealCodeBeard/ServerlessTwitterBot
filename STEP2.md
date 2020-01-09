@@ -3,6 +3,10 @@
 ## What's this all about?
 In this step you will install the Azure Functions extension for Visual Studio Code if you haven't already. You will also need the Azure Functions Core Tools. 
 
+## TL;DR
+- Install Azure Functions Extension if you haven't already.
+- Install Azure Functions Core Tools if you haven't already .
+
 ## Known gotchas
 
 1. If you are unable to install for some reason you won't be able to get very far with this tutorial.

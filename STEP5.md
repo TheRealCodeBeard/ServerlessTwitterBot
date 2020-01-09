@@ -9,6 +9,11 @@ In this step we will create a Logic App. A Logic App is a low code / no code ser
 
 3. Post that generated content to Twitter for all the world to see.
 
+## TL;DR
+- Create the Logic App on a recurrant schedule that calls your function.
+- Post the content to Twitter.
+- See how it breaks based on Twitter's rules about duplicate content.
+
 ## Known gotchas
 
 1. You will need to authorise access to Twitter so make sure you have the log in details handy if they are not already stored in your browser. 

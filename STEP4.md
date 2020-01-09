@@ -3,6 +3,14 @@
 ## What's this all about?
 What we are about to do in this step is not good practice, but it is possible. We are going to deploy directly from Visual Studio Code to Azure. This is something the Azure Functions Extension allows you to do. In [Step 6](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP6.md) we will learn how to do this on push with a GitHub action.
 
+
+## TL;DR
+- Deploy the function to Azure from VSCode (Yes, we will do GitHub actions later).
+- Check what gets created, and where, in Azure.
+- Make a code change to cause the function to return `Bibble wibble wobble`.
+- Deploy to Azure and test the function's URL that it returns what you expect.
+
+
 ## Known gotchas
 
 1. It is hard to predict what issues you might have with your connection to Azure. In all cases I have met there have been no issues but if there are restrictions on what you can deploy you may become blocked at this point. 

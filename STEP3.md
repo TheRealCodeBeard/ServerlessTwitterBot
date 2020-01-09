@@ -3,6 +3,11 @@
 ## What's this all about?
 Before we send our Functions to the cloud we are going to create them locally. In a normal 'production code' scenario there is a lot more testing and rigour needed than that we will do today. This tutorial will give you the overall idea and help you integrate these steps into your normal workflow.
 
+## TL;DR
+- Create the default Azure function locally.
+- Check that it run locally.
+- Check in the code to the repo.
+
 ## Known gotchas
 
 1. If you haven't followed the prerequistes or [Step 2](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP2.md) and don't have the Azure Functions Core Tools installed you won't be able to do some of the things written here.

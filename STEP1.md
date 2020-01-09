@@ -2,6 +2,10 @@
 ## What's this all about?
 In this step you will create a GitHub repository (repo), open it in Visual Studio Code and commit a change to the README file to make sure everything is working as intended.
 
+## TL;DR
+- Create a new repo in GitHub.
+- Get it open in VSCode.
+
 ## Known gotchas
 
 1. At certain points you may need to authenticate if you haven't done a particular linking step before. This will require you to remember your password and/or use the MFA system in GitHub.

@@ -5,6 +5,12 @@ GitHub Actions is a great [CI/CD](https://en.wikipedia.org/wiki/CI/CD) framework
 
 There is huge depth to [GitHub Actions](https://github.com/features/actions) and you can read more there should you choose. We are going to do the absolute minimum to get our Node.js Function automatically deployed to Azure when we push the code to our GitHub repository. We will remain focused on the Function and we will not be automatically deploying the Logic App.
 
+## TL;DR
+- Generate a service principle for GitHub actions from Azure Cloud Shell.
+- Set up a GitHub action on the repo using the secret.
+- Test the GitHub action runs correctly.
+- Make a code change to create _unique_ tweets and check in.
+
 ## Known gotchas
 
 1. To be able to deploy to Azure from GitHub actions in this way you will need to be able to set up a [Service Principal](https://docs.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals) in your Azure subscription relating to your Functions App. Make sure that you have the ability to do this.
