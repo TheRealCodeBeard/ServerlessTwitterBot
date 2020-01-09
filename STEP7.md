@@ -63,9 +63,44 @@ You will notice that this is high grade social media nonsense!
 
 In this case I am using a seeded random method. This means that the _name_ is used to seed the generation of content based on libraries and templates. I rely on the [seedrandom](https://www.npmjs.com/package/seedrandom) package to provide me with seeded random numbers. In the example below I will use the standard JavaScript `Math.random()`.
 
+Firstly you need some words to choose from. Lets call these the 'library arrays'. You can have this data stored in seperate files or in a database. This is a toy example, so I will stick to arrays.
 
+```javascript
+let adjectives = ['lovely','wonderful','fantastic','amazing','glorious','cromulent','awesome'];
+let things = ['house','cat','dog','fish','hat','ideology','book'];
+let verbs = ['caused','proved','symbolised','indicated','enabled','helped with'];
+let state = ['joy','happiness','creativity','wonderment','amazement','fascination','surprise'];
+```
+
+Something to note here is that if your arrays are too short, you will risk generating the same text and Twitter rejecting it.
+
+While you can choose from an array by passing a number to it, `adjectives[3]` = 'amazing' for example, we want to generate novel pieces of text. I find it easiest to do this with a function that picks randomly from an array for me and a template string.
+
+```javascript
+let choose_from = function(array){
+    return array[Math.floor(Math.random()*array.length)];
+};
+```
+
+What this is doing is generating a random number between 0 and 1 (for example `0.52861519357807616`). This number is then multiplied by the length of the array. For example, our adjectives array above is 7 elements long. `0.52861519357807616*7 = 3.7003063550465334`. `3.7003063550465334` isn't an index to our array. We need one of these 0,1,2,3,4,5,6. `Math.floor()` is a funcation that takes the lowest whole number without any decimals. `Math.floor(0.52861519357807616*7) = 3`. Using floor also prevents us getting 7. While our array has 7 elements, we count from 0 so the maximum number is 6. `adjectives[Math.floor(0.52861519357807616*7)] = 'amazing'`.
+
+To get a final sentence we use a tempalted string.
+```javascript
+let generated = `This ${choose_from(adjectives)} ${choose_from(things)} ${choose_from(verbs)} ${choose_from(state)}.`;
+```
+
+This is using a 'back-tick' string (notice how the inveted comma goes backwards). This means we can use `${}` to call pieces of code to get the text we want at that position. `${choose_from(adjectives)}` calls our `choose_from` function on our `adjectives` array.
 
 You can find a code file for this example in this repo. [generator.js](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/generator.js)
+
+Some examples of what this generates are:
+
+```
+This awesome ideology helped with creativity.
+This amazing ideology proved joy.
+This wonderful book symbolised happiness.
+This wonderful fish symbolised joy.
+```
 
 When you are generating random text for Twitter you have to make sure that...
 1. It is shorter than the maxumum tweet length. 
