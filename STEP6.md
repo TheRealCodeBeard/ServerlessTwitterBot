@@ -176,4 +176,4 @@ Then load your function via the URL as we did before.
 
 You should see that it now shows the Date and Time.
 
-When you are ready, move on to [Step 7](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP6.md) to reactivate the Logic App!
+When you are ready, move on to [Step 7](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP7.md) to reactivate the Logic App!
