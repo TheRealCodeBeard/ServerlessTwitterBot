@@ -33,13 +33,23 @@ _Be Warned, this is a rabbit hole of fun. Many hours can be spent working out wh
 
 ### Example 1
 
+I met someone once who thought it would be ammusing to 'waste globally unique ids'. This is somewhat of an existential art project. [Guid_e](https://twitter.com/guid_e) tweets a globally unique identifier every day. One day, in the far future, this will have to run out.
+
+If you wanted to do this in Node.js then you would need to install the [uuid](https://www.npmjs.com/package/uuid) package.
+
+`npm install uuid`
+
+You would then create a UUID (GUID) based on your prefered method in the Azure Function. You can see the instructions in the link above. Then tweet it. _Amazing_.
+
+### Example 2
+
 I have created an 'advanced' Twitter bot called [@maps_pixel](https://twitter.com/maps_pixel). This uses the [canvas](https://www.npmjs.com/package/canvas) package to create pixel-art images of maps that use [cellular automata](https://en.wikipedia.org/wiki/Cellular_automaton) type functions to generate the map data. This was inspired by the [Forest-Fire model](https://en.wikipedia.org/wiki/Forest-fire_model). Can find the repo of code [here](https://github.com/TheRealCodeBeard/gentown).
 
 They look like this ...
 
 <img src="https://github.com/TheRealCodeBeard/gentown/blob/master/images/map.png" alt="Map">
 
-### Example 2
+### Example 3
 
 If you chose to explore the above twitter account you may notice that the bot also generates a description of the map. 
 
