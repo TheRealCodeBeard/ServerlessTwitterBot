@@ -165,4 +165,6 @@ module.exports = async function (context, req) {
 
 Just what everyone wants. A twitter bot that tells you the time every hour. This is guaranteed to be unique because it tweets every hour and includes the date.
 
-_Commit that change_ and then sync the repository with GitHub. 
+_Commit that change_ and then sync the repository with GitHub.
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/19_2_workflow_out_of_sync.JPG" alt="Success" width="50%">
