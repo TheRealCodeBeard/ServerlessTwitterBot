@@ -151,4 +151,18 @@ Wait and see what happens, it should succeed. You should see the steps that were
 
 ## Code change 2
 
-TODO
+Before we check in we need to make sure that the tweet is 'unique'. I am going to do  that in the most boring way possible for now. In the `index.js` file change the function to output the date and time.
+
+```javascript
+module.exports = async function (context, req) {
+    context.log('Generating Nonsense...');
+    let now =new Date();
+    context.res = {
+        body: "The date & time now is: " + now.toISOString() + "T" + now.toTimeString()
+    };
+};
+```
+
+Just what everyone wants. A twitter bot that tells you the time every hour. This is guaranteed to be unique because it tweets every hour and includes the date.
+
+_Commit that change_ and then sync the repository with GitHub. 

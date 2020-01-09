@@ -3,7 +3,7 @@ Code along instructions for building 'My first Twitter bot with Azure Serverless
 
 ## Who is this for?
 
-### Main Audience 
+### Primary Audience 
 Those with some development experience. You have an idea about what Serverless is and that Continuous Integration/Continuous Deployment is useful in the overall code workflow. You are interested in how modern low-code/no-code solutions can be set up in a cloud native way to accelerate the delivery of ideas to production. You would rather not write boilerplate code for auth and glue.
 
 For this audience, this walk through will be 'straight forward' but will give you a thin slice through the full stack to a live result.
