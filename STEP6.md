@@ -168,3 +168,12 @@ Just what everyone wants. A twitter bot that tells you the time every hour. This
 _Commit that change_ and then sync the repository with GitHub.
 
 <img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/19_2_workflow_out_of_sync.JPG" alt="Success" width="50%">
+
+Go to GitHub and watch the action complete.
+Then load your function via the URL as we did before.
+
+<img src="https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/screengrabs/19_4_new_web.JPG" alt="Success" width="50%">
+
+You should see that it now shows the Date and Time.
+
+When you are ready, move on to [Step 7](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP6.md) to reactivate the Logic App!

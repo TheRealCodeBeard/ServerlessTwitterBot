@@ -49,7 +49,8 @@ To be able to build along with this tutorial you will need.
 6. **Set up a GitHub Action** ([details](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP6.md)). 
 
     In this step we learn how to set up a GitHub action in our repo from step 1 to automate the release of our code.
-7. **Live Twitter Bot!** (details)
+
+7. **Live Twitter Bot!** ([details](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/STEP7.md)). Reactivate your logic app and generate unique tweets!
 
 ## Architecture
 
