@@ -190,13 +190,15 @@ JavaScript is not the first language most think of when it comes to Machine Lear
 
 So, you can ML too!
 
-A very simple technique for Natural Language Generation uses a simple version of a [Markov Chain](https://en.wikipedia.org/wiki/Markov_chain). How does this work? 
+#### Natural Language Generation specifically
 
-First of all you will need a [repository](http://www.gutenberg.org/) of text to work with. I have provided a [text file](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/some_text.js) in this repo. 
+A very simple technique for Natural Language Generation uses a simple version of a [Markov Chain](https://en.wikipedia.org/wiki/Markov_chain). How does this work?
 
-I will continue this section [in the comments of this javascript file](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/simple_markov.js).
+**First** of all you will need a [repository](http://www.gutenberg.org/) of text to work with. I have provided a [text file](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/some_text.js) in this repo. 
 
-The simple Markov method will generally generate nonsense. It's fun though.
+**Next, Code**. I will continue this section [in the comments of this javascript file](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/simple_markov.js).
+
+**Note** The simple Markov method will generally generate nonsense. It's fun though.
 Using all these different ML techniques _combined_ with templating and random generation and explicit logic gives the best results currently. 
 
 Or you could consider...
