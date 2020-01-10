@@ -245,7 +245,7 @@ Trigger word: Deep learning
 Deep learning (as rival schools scramble to train with the use of OO clusters). Curiously, most of
 
 Trigger word: Meaning
- Meaning is the behaviour of Titan, due to it being one of the last sentient life forms within the Milky
+Meaning is the behaviour of Titan, due to it being one of the last sentient life forms within the Milky
 ```
 
 #### Meaning
