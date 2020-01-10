@@ -62,4 +62,4 @@ To be able to build along with this tutorial you will need.
 
 7. **Live Twitter Bot!** ([details](STEP7.md)).
 
-Reactivate your logic app and generate unique tweets!
+    Reactivate your logic app and generate unique tweets!
