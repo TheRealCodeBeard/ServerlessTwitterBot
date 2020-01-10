@@ -198,6 +198,12 @@ A very simple technique for Natural Language Generation uses a simple version of
 
 **First** of all you will need a [repository](http://www.gutenberg.org/) of text to work with. I have provided a [text file](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/some_text.js) in this repo. 
 
+**Second** a picture of what we will be doing.
+
+![modeling diagram](markov.JPG)
+
+We will be using Node to 'read' a piece of text. This 'reading' results in a model built from that text which contains 'which words follow other words'. We then use a 'trigger word' to start a sentence. The sentence is built from the model. 
+
 **Next, Code**. I will continue this section [in the comments of this javascript file](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/simple_markov.js).
 
 **Note** The simple Markov method will generally generate nonsense. It's fun though.
