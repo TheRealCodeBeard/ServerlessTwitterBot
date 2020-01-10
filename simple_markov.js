@@ -3,6 +3,10 @@ Welcome to a comments based tutorial of a simple markov model in JavaScript.
 Does this count as Machine Learning? Yes it does.
 */
 
+/////////////////////////////////
+// READING THE DATA
+/////////////////////////////////
+
 //This is Nodes file system handling. We _require_ it.
 const fs = require('fs');
 
@@ -18,6 +22,10 @@ let all_text = fs.readFileSync(data_file,'utf8');
 // Each of the lines in this file is a paragraph.
 // So lets chop it up like that for looping
 let all_paragraphs = all_text.split('\r\n');
+
+/////////////////////////////////
+// BUILDING THE MODEL
+/////////////////////////////////
 
 //initialise the model to an empty object. It's going to be a dictionary. JavaScript is magic.
 let model = {};
@@ -38,7 +46,7 @@ all_paragraphs.forEach(p=>{
 
 //This will write the model out to the terminal.
 //What you will notice is that, because the text sample is short, there are a lot of words with only one word following. 
-console.log(model);
+//console.log(model); //uncomment this to dump out the model
 /* Here is a sample of what I get
 
 { ...
@@ -67,5 +75,58 @@ What you will notice is that 'all' has 'that' in it's array of following words 3
 Because the duplication means that the duplicated word is _more likely_ to be chosen from the array.
 You will see this happening next. The arrays next to the keys represent an _implicit_ statistical model through duplication.
 This is not memory efficient but it works. So... thats what we are doing. 
+
+*/
+
+/////////////////////////////////
+// SERIALISING THE MODEL
+/////////////////////////////////
+
+//let serialised_model = JSON.stringify(model,2);
+//console.log(serialised_model);
+//You can write this model out to a file if you want to use it later.
+//fs.writeFileSync("model file path",serialised_model);
+//You would load it back in with
+//model = JSON.parse(fs.readFileSync("model file path"));
+
+/////////////////////////////////
+// USING THE MODEL
+/////////////////////////////////
+
+//We are going to take our trigger word from the model so it is 'definitly there'.
+//If the word wasn't there, we wouldn't get a sentence.
+//There are various techniques for getting the 'closest' word. But I am not going into that now.
+let all_words = Object.getOwnPropertyNames(model);//Unique list of words in the text. Neat!
+let random_word = () =>all_words[Math.floor(Math.random()*all_words.length)];
+let trigger_word = random_word();//Or that choose_from function from before.
+console.log(`Trigger word: ${trigger_word}`);
+
+//How long do we want the sentence to be?
+let sentence_length = 10;//10 words seems enough for now.
+let sentence = [];
+for(var i=0;i<sentence_length;i++){//OLD SCHOOL FOR LOOP 💕
+    //Add the trigger word, the first one on the first loop.
+    sentence.push(trigger_word);
+    //Pick the next trigger word randomly from the following words in the model.
+    //If there isn't a word following that trigger word (it came at the end of a sentence) then pick another one at random.
+    trigger_word = model[trigger_word]?model[trigger_word][Math.floor(Math.random()*model[trigger_word].length)]:random_word();
+}
+//Join the parts of our sentence together with spaces.
+let our_sentence = sentence.join(' '); 
+//Write our sentence out with an initial capital and a full stop at the end.
+console.log(`${our_sentence.slice(0,1).toUpperCase()}${our_sentence.slice(1)}.`,'\n');
+
+/* Here are some examples of what I got...
+Trigger word: heavy
+Heavy shower upon them as inferior to a huge volcanic. 
+
+Trigger word: Punch
+Punch I sat on earth as I watched keenly and. 
+
+Trigger word: plans
+Plans against anything manlike on the light creeping zenithward towards. 
+
+Trigger word: an
+An enormous velocity towards midnight of the political immensely excited. 
 
 */
