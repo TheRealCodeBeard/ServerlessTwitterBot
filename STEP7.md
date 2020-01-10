@@ -209,6 +209,25 @@ We will be using Node to 'read' a piece of text. This 'reading' results in a mod
 **Note** The simple Markov method will generally generate nonsense. It's fun though.
 Using all these different ML techniques _combined_ with templating and random generation and explicit logic gives the best results currently. 
 
+Here are some examples of what I got...
+```
+Trigger word: heavy
+Heavy shower upon them as inferior to a huge volcanic. 
+
+Trigger word: Punch
+Punch I sat on earth as I watched keenly and.
+
+Trigger word: plans
+Plans against anything manlike on the light creeping zenithward towards. 
+
+Trigger word: an
+An enormous velocity towards midnight of the political immensely excited. 
+```
+
+_I watched keenly and_ what! The suspence is destroying me.
+
+So, make your bot Tweet that?
+
 Or you could consider...
 
 ### Example 6: DEEP LEARNING
