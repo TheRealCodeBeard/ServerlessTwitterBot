@@ -214,7 +214,7 @@ Here are some examples of what I got...
 Trigger word: heavy
 Heavy shower upon them as inferior to a huge volcanic. 
 
-Trigger word: Punch
+Trigger word: punch
 Punch I sat on earth as I watched keenly and.
 
 Trigger word: plans

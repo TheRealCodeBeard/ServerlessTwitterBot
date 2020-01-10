@@ -34,8 +34,9 @@ let model = {};
 all_paragraphs.forEach(p=>{
     let lines = p.split(/[\.\!\?]/);//I am doing this to get rid of . and also, it works in sentences. 
     lines.forEach(l=>{//This is when things get exciting.
-        //Split the line into words, get rid of pesky commas and brackets and semi-colons, trim the word and filter out empty words
-        let words = l.split(/\s/).map(w=>w.replace(/[\(,\);]/,'').trim()).filter(w=>w!=='');
+        //Split the line into words, get rid of pesky commas and brackets and semi-colons, 
+        //trim the words, make them all lower case and filter out empty words
+        let words = l.split(/\s/).map(w=>w.replace(/[\(,\);]/,'').trim().toLowerCase()).filter(w=>w!=='');
         words.forEach((w,i)=>{//There is a lot of looping here.
             //Because we take each word and it's NEXT word we make sure we don't fall off the end of the array. The last word doesn't have anything following it anyway.
             //If the model[w] has an array, then push the next word onto it. If not, create a new array with the next word in it.
