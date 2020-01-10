@@ -207,7 +207,7 @@ We will be using Node to 'read' a piece of text. This 'reading' results in a mod
 **Next, Code**. I will continue this section [in the comments of this javascript file](https://github.com/TheRealCodeBeard/ServerlessTwitterBot/blob/master/simple_markov.js).
 
 **Note** The simple Markov method will generally generate nonsense. It's fun though.
-Using all these different ML techniques _combined_ with templating and random generation and explicit logic gives the best results currently. 
+Using all these different ML techniques _combined_ with templating and random generation and explicit logic gives the best results currently.
 
 Here are some examples of what I got...
 ```
@@ -232,4 +232,30 @@ Or you could consider...
 
 ### Example 6: DEEP LEARNING
 
-TODO
+Sorry, no deep learning examples from me here. 
+
+You can go and look at what OpenAI is up to [here](https://openai.com/blog/better-language-models/) and there is a simplified version of the model available in [this repo](https://github.com/openai/gpt-2/) at the time of writing. I think [this](https://gpt2.ai-demo.xyz/) is a demo of it working. 
+
+I got...
+```
+Trigger word: Banana
+Banana for £6. The difference is huge. My brief with Glass Bottle 2 Kitchen Effect Reasonable Bubble
+
+Trigger word: Deep learning
+Deep learning (as rival schools scramble to train with the use of OO clusters). Curiously, most of
+
+Trigger word: Meaning
+ Meaning is the behaviour of Titan, due to it being one of the last sentient life forms within the Milky
+```
+
+#### Meaning
+When we are dealing with text there is a key philosophical problem with processing text and 'hoping' that the model learns to deal with meaning. Meaning is not contained within language. Language _causes_ meaning. Language does not _contain_ meaning. So while the Deep Learning examples are exceptionally clever and some of them have managed to do incredibly useful things they are flawed. No matter how many nerons we throw at building a model there are only three things that will happen:
+
+1. We will have accidental success. We will see something that is not 'nonsense' and ascribe meaning to it. 
+2. We will have _great_ summarisers. This is because the summary and what is being summarised are intrinsically linked.
+3. We will accept that it is a flawed methodlogy and try something else.
+
+What will work better?
+
+While it is currently deeply unfashionable, Symbolic AI techniques will do a better job of text generation because they will abstract away from reactive 'input-output' models and work with connected concepts. For example, in a knowledge graph. The _generation_ of text from these systems will look very much like the templating we saw earlier. But I digress...
+
