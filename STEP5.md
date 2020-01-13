@@ -1,28 +1,30 @@
 # Step 5: Build the Logic App
 
 ## What's this all about?
+
 In this step we will create a Logic App. A Logic App is a low code / no code serverless solution that is similar to [Power Automate (Flow)](https://flow.microsoft.com/). This powerful automation tool can be used to quickly build the 'connective tissue' of Serverless solutions. We are using the Logic App to do the following things:
 
-1. Create a recurrent schedule. Azure takes responsibility for running that schedule for you and keeps a log of success and failure. 
+1. Create a recurrent schedule. Azure takes responsibility for running that schedule for you and keeps a log of success and failure.
 
 2. Call the function we created in [Step 4](STEP4.md) to generate some content.
 
 3. Post that generated content to Twitter for all the world to see.
 
 ## TL;DR
+
 - Create the Logic App on a recurrent schedule that calls your function.
 - Post the content to Twitter.
 - See how it breaks based on Twitter's rules about duplicate content.
 
 ## Known gotchas
 
-1. You will need to authorise access to Twitter so make sure you have the log in details handy if they are not already stored in your browser. 
+1. You will need to authorise access to Twitter so make sure you have the log in details handy if they are not already stored in your browser.
 
 2. As noted in the [README](README.md) if you are planning on setting up a new Twitter account for this project that will require a new email address.
 
 ## Create the Logic App
 
-Go to your resource group (the one created in [Step 4](STEP4.md)) and click the '+ Add' button in the top bar of the Overview panel. 
+Go to your resource group (the one created in [Step 4](STEP4.md)) and click the '+ Add' button in the top bar of the Overview panel.
 
 In the 'Search the Marketplace' bar at the top of the 'New' panel type `Logic App` and click the matching search result. You will then be presented with a page with this at the top.
 
@@ -32,25 +34,25 @@ Click 'Create' and you will get presented with the creation form.
 
 <img src="screengrabs/13_2_create_logic_app.JPG" alt="Fill in the form" width="30%">
 
-Give the Logic App a sensible name, make sure you are in the intended subscription, make sure to 'Use existing' Resource Group and select the one we created for this project. Choose the same region as you have been using all along and leave Log Analytics off for now. 
+Give the Logic App a sensible name, make sure you are in the intended subscription, make sure to 'Use existing' Resource Group and select the one we created for this project. Choose the same region as you have been using all along and leave Log Analytics off for now.
 
 Then click 'Create' at the bottom. This will send Azure off to create that for you. When it is done you should see the Logic App in your resource group.
 
 <img src="screengrabs/13_3_in_resource_group.JPG" alt="Find it in the resource group" width="75%">
 
-Click on that and you will get presented with the 'First view' Logic Apps Designer panel. 
+Click on that and you will get presented with the 'First view' Logic Apps Designer panel.
 
 ## Build the Logic App one block at a time
 
 Click on 'Recurrence' in the 'Start with a common trigger' section.
 
-<img src="screengrabs/13_4_click_recurance.JPG" alt="Make it trigger with recurrence" width="75%">
+<img src="screengrabs/13_4_click_recurrence.JPG" alt="Make it trigger with recurrence" width="75%">
 
 ## Recurrence
 
 This will take you to the full Designer view. With the Recurrence node open.
 
-<img src="screengrabs/14_1_recurance.JPG" alt="Recurrence settings" width="75%">
+<img src="screengrabs/14_1_recurrence.JPG" alt="Recurrence settings" width="75%">
 
 In this example I have set it to trigger once every hour. It's really up to you how often you trigger but you should think about two things:
 
@@ -110,7 +112,7 @@ What you will notice here is that you are authorising 'Microsoft Azure Logic App
 
 <img src="screengrabs/14_9_twitter_ready.JPG" alt="Authorised Twitter" width="75%">
 
-When you have successfully authorised, your 'Post a tweet' action will look like this. Notice that at the bottom it tells you which connection is being used. 
+When you have successfully authorised, your 'Post a tweet' action will look like this. Notice that at the bottom it tells you which connection is being used.
 
 Click on 'Add new parameter' and choose 'Tweet text'. You could just type a message here, but we are going to use the text our Function generates.
 
@@ -150,8 +152,8 @@ If you click on the 'Post a tweet' action you will see what the error is.
 
 Twitter doesn't allow you to post the same tweet twice. The message about the error comes back in the Body field of the Outputs box.
 
-Why has this happened? 
-It is because our Function only returns one thing. We will have to go and change that. But first go back to the overview panel for the Logic App anc click 'Disable'. 
+Why has this happened?
+It is because our Function only returns one thing. We will have to go and change that. But first go back to the overview panel for the Logic App anc click 'Disable'.
 
 <img src="screengrabs/16_5_disable.JPG" alt="Success" width="75%">
 

@@ -1,9 +1,11 @@
 # Step 3: Create function locally
 
 ## What's this all about?
+
 Before we send our Functions to the cloud we are going to create them locally. In a normal 'production code' scenario there is a lot more testing and rigour needed than that we will do today. This tutorial will give you the overall idea and help you integrate these steps into your normal workflow.
 
 ## TL;DR
+
 - Create the default Azure function locally.
 - Check that it runs locally.
 - Check in the code to the repo.
@@ -18,7 +20,7 @@ Before we send our Functions to the cloud we are going to create them locally. I
 
 You should see <img src="screengrabs/Step3_azure.JPG" alt="extensions" width="30"> on your side panel. Click this and you should see the 'FUNCTIONS' panel available to you. If you are logged in you should see a list of subscriptions available to you.
 
-I have redacted the subscription names I can see in the following screen grab. 
+I have redacted the subscription names I can see in the following screen grab.
 
 <img src="screengrabs/Step3_functions.JPG" alt="Functions panel" width="50%">
 
@@ -72,7 +74,7 @@ You can now run in Debug mode (as long as you have the Core Tools installed). Th
 
 <img src="screengrabs/09_2_f5_debug_run.JPG" alt="Web address" width="50%">
 
-This is the URL of the locally running function. You don't need authentication, stick that URL in your browser and hit go. 
+This is the URL of the locally running function. You don't need authentication, stick that URL in your browser and hit go.
 
 It will tell you that you should add `?name=yourname` on to the end like I mentioned above. You have a locally running function. Congratulations.
 

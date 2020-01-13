@@ -1,11 +1,13 @@
 # Step 6: Set up a GitHub Action
 
 ## What's this all about?
+
 GitHub Actions is a great [CI/CD](https://en.wikipedia.org/wiki/CI/CD) framework that uses simple [YAML](https://en.wikipedia.org/wiki/YAML) files to automate the your workflow. It is like Logic Apps for CI/CD ... but it uses YAML instead of a graphical user interface.
 
 There is huge depth to [GitHub Actions](https://github.com/features/actions) and you can read more there should you choose. We are going to do the absolute minimum to get our Node.js Function automatically deployed to Azure when we push the code to our GitHub repository. We will remain focused on the Function and we will not be automatically deploying the Logic App.
 
 ## TL;DR
+
 - Generate a service principal for GitHub actions from Azure Cloud Shell.
 - Set up a GitHub action on the repo using the secret.
 - Test the GitHub action runs correctly.
@@ -31,18 +33,19 @@ There are detailed instructions on the [GitHub page relating to Service Principa
 
 The template for the command you will be using is as follows
 
-```
+```bash
 az ad sp create-for-rbac --name "myApp" --role contributor \
     --scopes /subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.Web/sites/{app-name} \
     --sdk-auth
 ```
+
 This is a 'one line' command. But for ease it has been split over several lines with the \ character. What is going on in this command and what do you have to fill in?
 
-`az` is the Azure Command Line administrative application. 
+`az` is the Azure Command Line administrative application.
 
 `ad` is the Active Directory command. Active Directory is the identity provider for Azure.
 
-`sp` means Service Principal. This is the thing that we are creating. 
+`sp` means Service Principal. This is the thing that we are creating.
 
 `create-for-rbac` lets the tool know we are creating the service principal for 'role based access control' (rbac).
 
@@ -52,7 +55,7 @@ Anything with '--' in front of it is a setting for the command.
 
 `--role contributor` This is the _role_ (see: rbac) that the service principal needs to be able to release the Function App on your behalf. This is the _role_ you are giving the GitHub action by providing it with this secret.
 
-`--scopes` This setting gives the service specific access to a resource in azure. You will see here that there are sections between curly braces '{}'. These are the places you need to fill in the details of your app. 
+`--scopes` This setting gives the service specific access to a resource in azure. You will see here that there are sections between curly braces '{}'. These are the places you need to fill in the details of your app.
 
 In each case you need to replace the whole section including the '{}'.
 
@@ -60,7 +63,7 @@ In each case you need to replace the whole section including the '{}'.
 
 `{resource-group}` this is the _name_ of your resource group. In my case this was the truncated, lowercase name of my app. 'nonsensegeneratorfunctio'
 
-`{app-name}` this is the _name_ of your Function App. The easiest way to find this is on the Overview panel of the Function App in the URL. 
+`{app-name}` this is the _name_ of your Function App. The easiest way to find this is on the Overview panel of the Function App in the URL.
 
 <img src="screengrabs/17_1_function_app_name.JPG" alt="URL name" width="75%">
 
@@ -68,11 +71,11 @@ The app name is the sub domain of this URL. The sub domain is the section betwee
 
 `--sdk-auth` means that the command line app is authenticated via SDK with the credentials you are logged into the portal with.
 
-When you have filled in all those details (you may want to do this in Notepad or VSCode) you will need to copy this and paste it into the cloud shell. Pasting in the command should run it automatically. If it doesn't, hit return to execute. 
+When you have filled in all those details (you may want to do this in Notepad or VSCode) you will need to copy this and paste it into the cloud shell. Pasting in the command should run it automatically. If it doesn't, hit return to execute.
 
 You will end up with a block of JSON that looks like this will the `<GUID>` sections filled in.
 
-```JSON
+```json
   {
     "clientId": "<GUID>",
     "clientSecret": "<GUID>",
@@ -82,9 +85,17 @@ You will end up with a block of JSON that looks like this will the `<GUID>` sect
   }
 ```
 
-The `(...)` section represents some extra lines that provide various URLs and Endpoints. The block itself is about 12 lines long including '{}'. 
+The `(...)` section represents some extra lines that provide various URLs and Endpoints. The JSON object itself is about 12 lines long including '{}'.
 
-Copy the whole thing.
+Copy the whole JSON object.
+
+> For those of you who like to script then you could make use of [JMESPATH](https://azurecitadel.com/prereqs/cli/cli-3-jmespath/) queries:
+>
+> ```bash
+> funcname="NonsenseGeneratorFunctionApp"
+> funcid=$(az functionapp list --query "[?name == '"$funcname"'].id" --output tsv)
+> az ad sp create-for-rbac --name "http://$funcname" --role Contributor --scopes $funcid --sdk-auth
+> ```
 
 ## Putting the Secret in GitHub
 
@@ -92,7 +103,7 @@ In your GitHub repository go to the Settings tab and Secrets section.
 
 <img src="screengrabs/17_2_where_to_put_secret.JPG" alt="Secret vault" width="75%">
 
-Name your Secret `AZURE_CREDENTIALS_WIN` (you can name it anything, but this is the name we use later so keeping it the same is less work for you). Then paste your copied secret into the 'Value' box and click 'Add secret'
+Name your Secret `AZURE_CREDENTIALS_WIN` (you can name it anything, but this is the name we use later so keeping it the same is less work for you). Then paste your JSON object (including the clientSecret) into the 'Value' box and click 'Add secret'.
 
 When you have done this, the secret is locked and you can only 'Remove' it. It's encrypted and no one can see it. Only Actions can use it. Very safe.
 
@@ -112,7 +123,7 @@ GitHub helpfully presents a collection of standard workflow templates for you to
 
 ## The workflow YAML file
 
-You can find the workflow.yml file in this repo. [workflow.yml](workflow.yml). There are a few pieces of this you will need to update to relate to your functions app. 
+You can find the workflow.yml file in this repo. [workflow.yml](workflow.yml). There are a few pieces of this you will need to update to relate to your functions app.
 
 You can copy and paste the workflow.yml file linked above into the Edit new file window GitHub will be showing after clicking the 'Set up a workflow yourself' button above. You will see that in the path section we are in the .github/workflows folder editing a file called 'main.yml'. GitHub has helpfully put the file in the right place for us!
 
@@ -128,9 +139,10 @@ The next part can be read as a sentence 'on push branches master'. This is when 
 
 The jobs section is all related to what we want the action to do. It's very human readable and means what it says.
 
-'runs on windows latest' for example. 
+'runs on windows latest' for example.
 
 'steps' are the things the action will do.
+
 - Check out master
 - Log in to azure. Notice here how `creds` is set to `${{ secrets.AZURE_CREDENTIALS_WIN }}`. This is how, in an Actions YAML file you refer to the secret created earlier. If you changed the Secret name, you will need to update that here.
 - Set node version. Remember how we chose Node 10.x when we set up the Function App originally? Well, this version must match!
@@ -141,7 +153,7 @@ So as long as you have set up your Function App Name and Secret correctly, that 
 
 Click the 'Start commit' button and fill in your commit message and push. (Yes, in the GitHub portal).
 
-Because you just pushed a commit, the Action will run. 
+Because you just pushed a commit, the Action will run.
 
 <img src="screengrabs/18_4_workflow_running_post_commit.JPG" alt="Running" width="75%">
 

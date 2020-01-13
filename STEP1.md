@@ -1,8 +1,11 @@
 # Step 1: Set up GitHub Repository
+
 ## What's this all about?
+
 In this step you will create a GitHub repository (repo), open it in Visual Studio Code and commit a change to the README file to make sure everything is working as intended.
 
 ## TL;DR
+
 - Create a new repo in GitHub.
 - Get it open in VSCode.
 
@@ -10,10 +13,11 @@ In this step you will create a GitHub repository (repo), open it in Visual Studi
 
 1. At certain points you may need to authenticate if you haven't done a particular linking step before. This will require you to remember your password and/or use the MFA system in GitHub.
 
-2. I am showing screen grabs from the GitHub desktop app here. If you are more used to using the command line, please do as you see fit. The results will be the same. 
+2. I am showing screen grabs from the GitHub desktop app here. If you are more used to using the command line, please do as you see fit. The results will be the same.
 
 ## Create the repo
-In your GitHub account click 'New'. At the time of writing it looks like this. 
+
+In your GitHub account click 'New'. At the time of writing it looks like this.
 
 <img src="screengrabs/00_create_a_repo.JPG" alt="create new repository" width="50%" />
 
@@ -37,7 +41,7 @@ Choose where you want to work and click 'Clone'. Once you have done this you can
 
 ## Open the repo in VS Code
 
-In Visual Studio Code choose Open Folder and navigate to the folder of the cloned repo. 
+In Visual Studio Code choose Open Folder and navigate to the folder of the cloned repo.
 
 <img src="screengrabs/05_open_in_vs_code.JPG" alt="GitHub Desktop Clone Local" width="30%" />
 
@@ -55,7 +59,7 @@ Then add a commit message and click the tick.
 
 <img src="screengrabs/05_3_Ready_to_commit.JPG" alt="Ready to commit" width="30%" />
 
-On the bottom bar you will see the sync button showing how far you are ahead of the remote master (the version of our code on GitHub). 
+On the bottom bar you will see the sync button showing how far you are ahead of the remote master (the version of our code on GitHub).
 
 <img src="screengrabs/04_VS_Code_Sync_Button.JPG" alt="Ready to commit" width="30%" />
 
@@ -63,6 +67,35 @@ Click the two arrows in a circle next to the numbers and your code changes will 
 
 ## Check it is all there
 
-Navigate back to your repo in your browser and refresh the page. You should see the changes you made above reflected in the README.md file here. 
+Navigate back to your repo in your browser and refresh the page. You should see the changes you made above reflected in the README.md file here.
 
 When you are ready, move on to [Step 2](STEP2.md)
+
+## Alternatively...
+
+If you are often creating GitHub repos in Linux then you'll find that repeating these steps quickly becomes laborious. If that is you then read on!
+
+Create a [personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) and add Rich Cheney's [github init](https://github.com/richeney/github-init) function into your ~/.bashrc file, and then you could get to the same point in just a few CLI commands. For example:
+
+1. Create the local repo directory
+
+    ```bash
+    mkdir -p /git/NonsenseFountain
+    cd /git/NonsenseFountain
+
+1. Create a README.md file (optional)
+
+    ```bash
+    cat > README.md <<EOF
+    # NonsenseFountain
+
+    A Twitter Bot Repo
+
+    EOF
+    ```
+
+1. Initialise the local repo and push up to new GitHub repo
+
+    ```bash
+    github init
+    ```
