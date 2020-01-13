@@ -25,7 +25,9 @@ In Azure click the Cloud Shell button in the top bar of the portal (next to the 
 
 <img src="screengrabs/17_1_cloud_shell.JPG" alt="Cloud SHell" width="50%">
 
-Click this button and Cloud Shell will load at the bottom of the portal window. When this has finished you will end up with a cursor on a command line.
+Click this button and Cloud Shell will load at the bottom of the portal window. When this has finished you will end up with a cursor on a command line. 
+
+> Note. If this is the first time using the cloud shell you will be prompted to create or select a storage account to use, if any any doubt simply take the defaults. Should you want more options, Azure docs has [more information on this subject](https://docs.microsoft.com/en-us/azure/cloud-shell/persisting-shell-storage)
 
 There are detailed instructions on the [GitHub page relating to Service Principals](https://github.com/Azure/functions-action#using-azure-service-principle-for-rbac-as-deployment-credential). That you can read up on further should you wish to.
 
@@ -38,7 +40,7 @@ az ad sp create-for-rbac --name "myApp" --role contributor \
 ```
 This is a 'one line' command. But for ease it has been split over several lines with the \ character. What is going on in this command and what do you have to fill in?
 
-`az` is the Azure Command Line administrative application. 
+`az` is the Azure Command Line administrative application (aka 'the Azure CLI'). 
 
 `ad` is the Active Directory command. Active Directory is the identity provider for Azure.
 
@@ -64,15 +66,15 @@ In each case you need to replace the whole section including the '{}'.
 
 <img src="screengrabs/17_1_function_app_name.JPG" alt="URL name" width="75%">
 
-The app name is the sub domain of this URL. The sub domain is the section between the '//' and the next '.'. In this case `nonsensegeneratorfunctionapp`. You will notice this is the name you gave for the Function App in lowercase and URL safe.
+The app name is the sub domain of this URL. The sub domain is the section between the `//` and the `.azurewebsites` part. In this case `nonsensegeneratorfunctionapp`. You will notice this is the name you gave for the Function App in lowercase and URL safe.
 
-`--sdk-auth` means that the command line app is authenticated via SDK with the credentials you are logged into the portal with.
+`--sdk-auth` means output the result in a format that is compatible with Azure SDKs, in essence you get a chunk of JSON as the output.
 
-When you have filled in all those details (you may want to do this in Notepad or VSCode) you will need to copy this and paste it into the cloud shell. Pasting in the command should run it automatically. If it doesn't, hit return to execute. 
+When you have filled in all those details (you may want to build the command up in Notepad or VSCode) you will need to copy this and paste it into the cloud shell. Pasting in the command should run it automatically. If it doesn't, hit return to execute. 
 
 You will end up with a block of JSON that looks like this will the `<GUID>` sections filled in.
 
-```JSON
+```json
   {
     "clientId": "<GUID>",
     "clientSecret": "<GUID>",
@@ -84,11 +86,11 @@ You will end up with a block of JSON that looks like this will the `<GUID>` sect
 
 The `(...)` section represents some extra lines that provide various URLs and Endpoints. The block itself is about 12 lines long including '{}'. 
 
-Copy the whole thing.
+Copy the **whole thing**.
 
 ## Putting the Secret in GitHub
 
-In your GitHub repository go to the Settings tab and Secrets section.
+In your GitHub repository go to the 'Settings' tab and 'Secrets' section.
 
 <img src="screengrabs/17_2_where_to_put_secret.JPG" alt="Secret vault" width="75%">
 
