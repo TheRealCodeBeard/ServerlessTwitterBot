@@ -1,7 +1,7 @@
 # Step 4: Push the Function to Azure
 
 ## What's this all about?
-What we are about to do in this step is not good practice, but it is possible. We are going to deploy directly from Visual Studio Code to Azure. This is something the Azure Functions Extension allows you to do. In [Step 6](STEP6.md) we will learn how to do this on push with a GitHub action.
+What we are about to do in this step is not good practice, but it is possible. We are going to deploy directly from Visual Studio Code to Azure. This is something the Azure Functions Extension allows you to do. In [Step 6](STEP6.md) we will learn how to do this via a more convential, controlled process using a GitHub Action workflow.
 
 
 ## TL;DR
@@ -17,7 +17,7 @@ What we are about to do in this step is not good practice, but it is possible. W
 
 ## Deploy to Azure
 
-On the Azure Functions panel click the Deploy To Azure button.
+On the Azure Functions panel in VS Code, click the 'Deploy To Azure' button, which looks like a blue up arrow.
 
 <img src="screengrabs/10_0_deploy_to_azure.JPG" alt="Deploy to Azure" width="50%">
 
@@ -35,15 +35,15 @@ Choose Node.js version 10.x
 
 <img src="screengrabs/10_6_node_version_10.JPG" alt="Version it" width="50%">
 
-Choose a region
+Choose a region, logically pick one close to you.
 
 <img src="screengrabs/10_7_region.JPG" alt="Region" width="50%">
 
-The extension will set up all the stuff and tell you when it's done.
+The extension will set up all the resources in Azure, it might take a few minutes, it will tell you when it's done. You can click 'View Output' to see the log of what is has done.
 
 <img src="screengrabs/10_9_finished.JPG" alt="Done!" width="50%">
 
-## What gets created on Azure?
+## What gets created in Azure?
 
 If you log into the [Azure Portal](https://portal.azure.com) and you select your resource groups list <img src="screengrabs/azure_resource_groups.JPG" alt="Version it" width="50"> you will find one with a similar name to your Function App. You will see in the screen grab below that mine is called 'nonsensegeneratorfunctio' it has been made all lower case and truncated in length.
 
@@ -71,15 +71,17 @@ You will also see a message that tells you your app is read only.
 
 This is due to the method of release we have used. We have released from Visual Studio Code. It is possible to write the Function directly in the Azure Portal. I wouldn't recommend this for anything other than testing or noodling about.
 
-Click the Get function URL button that is next to the Run button on the code page.
+Click the 'Get function URL' link that is next to the 'Run' button on the code page.
 
-<img src="screengrabs/11_2_function_app_url_button.JPG" alt="Button" width="50%">
+<img src="screengrabs/11_2_function_app_url_button.JPG" alt="Button" width="70%">
 
-<img src="screengrabs/11_2_function_app_url.JPG" alt="Earl" width="50%">
+<img src="screengrabs/11_2_function_app_url.JPG" alt="Earl" width="70%">
 
-This gives you a choice of key (leave this as 'default (Function Key)' for now) and the URL. The box is small so you can't see the full extent of the URL here. It includes the authorisation key in a url parameter called 'code'. Click the copy button and open a new tab in your browser.
+This gives you a choice of key (leave this as 'default (Function Key)' for now) and the URL. The box is small so you can't see the full extent of the URL here. It includes the authorisation key in a URL parameter called `code`. Click the copy button and open a new tab in your browser.
 
 Remember ... you will need to add `&name=something` to the URL otherwise the default function will complain. 
+
+Note. The `code={authorisation-key}` parameter wasn't required when testing locally, only when it's live in Azure.
 
 ## Code change 1.
 
@@ -101,7 +103,7 @@ module.exports = async function (context, req) {
 
 The changes here simplify the function right down to just returning the words `Bibble wibble wobble` (such fun, much quirky). The line `context.log('Generating Nonsense...');` logs a message internally to the Function App. 
 
-```
+```javascript
 context.res = {
     body: "Bibble wibble wobble"
 };
@@ -114,8 +116,9 @@ Then complete the following steps that we have been over before.
 
 - Check in your changes. Covered in [Step 1](STEP1.md)
 - Push the change to GitHub. Covered in [Step 1](STEP1.md)
-- Deploy the function to Azure. Covered in this step.
-- Test your function in a browser. Covered in this step.
+- Deploy the function to Azure. Covered above. 
+  - Note. Deploy to your **existing** Function App rather than creating a new one, i.e. you are doing a redeploy. You will get a popup to confirm this is what you want to do.
+- Test your function in a browser. Covered above.
 
 You should end up with something that looks like this.
 
