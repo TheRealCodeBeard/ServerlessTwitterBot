@@ -29,7 +29,7 @@ In Azure click the Cloud Shell button in the top bar of the portal (next to the 
 
 Click this button and Cloud Shell will load at the bottom of the portal window. When this has finished you will end up with a cursor on a command line. 
 
-> Note. If this is the first time using the cloud shell you will be prompted to create or select a storage account to use, if any any doubt simply take the defaults. Should you want more options, Azure docs has [more information on this subject](https://docs.microsoft.com/en-us/azure/cloud-shell/persisting-shell-storage)
+> Note. If this is the first time using the Azure Cloud Shell you will be prompted to create or select a storage account to use, if any any doubt simply take the defaults. Should you want more options, Azure docs has [more information on this subject](https://docs.microsoft.com/en-us/azure/cloud-shell/persisting-shell-storage)
 
 There are detailed instructions on the [GitHub page relating to Service Principals](https://github.com/Azure/functions-action#using-azure-service-principle-for-rbac-as-deployment-credential). That you can read up on further should you wish to.
 
@@ -75,7 +75,7 @@ The app name is the sub domain of this URL. The sub domain is the section betwee
 
 When you have filled in all those details (you may want to build the command up in Notepad or VSCode) you will need to copy this and paste it into the cloud shell. Pasting in the command should run it automatically. If it doesn't, hit return to execute. 
 
-You will end up with a block of JSON that looks like this will the `<GUID>` sections filled in.
+You will end up with a block of JSON that looks like this, with the `<GUID>` sections filled in.
 
 ```json
   {
@@ -91,10 +91,10 @@ The `(...)` section represents some extra lines that provide various URLs and En
 
 Copy the whole JSON object.
 
-> Optional. For those of you who are a little more comfortable with the command line and bash, then you could make use of [JMESPATH](https://azurecitadel.com/prereqs/cli/cli-3-jmespath/) queries:
+> Optional. For those of you who are a little more comfortable with the command line and bash, then you could make use of [JMESPATH](https://azurecitadel.com/prereqs/cli/cli-3-jmespath/) queries. This will save you manually building the id of the Function App in your command:
 >
 > ```bash
-> funcname="NonsenseGeneratorFunctionApp"
+> funcname="Change_To_Your_Function_App_Name"
 > funcid=$(az functionapp list --query "[?name == '"$funcname"'].id" --output tsv)
 > az ad sp create-for-rbac --name "http://$funcname" --role Contributor --scopes $funcid --sdk-auth
 > ```
