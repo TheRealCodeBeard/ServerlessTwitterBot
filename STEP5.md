@@ -22,7 +22,7 @@ In this step we will create a Logic App. A Logic App is a low code / no code ser
 
 ## Create the Logic App
 
-Go to your resource group (the one created in [Step 4](STEP4.md)) and click the '+ Add' button in the top bar of the Overview panel. 
+Over in the Azure portal, go to your resource group (the one created in [Step 4](STEP4.md)) and click the '+ Add' button in the top bar of the Overview panel. 
 
 In the 'Search the Marketplace' bar at the top of the 'New' panel type `Logic App` and click the matching search result. You will then be presented with a page with this at the top.
 
@@ -56,9 +56,9 @@ In this example I have set it to trigger once every hour. It's really up to you 
 
 1. Your audience on Twitter. Is your bot going to be so interesting that people want to see it's tweet more than once an hour?
 
-2. Cost. If you are calling your Function on a consumption plan, how much are you going to spend calling it once every 30 seconds? Best to slow it down. We can always trigger the Logic App manually to test it.
+2. Cost. If you are calling your Logic App and Function on a consumption plan, how much are you going to spend calling it once every 30 seconds? Best to slow it down. We can always trigger the Logic App manually to test it.
 
-## Call your Function
+## Integrate and call your Function
 
 Click the '+ New step' button and search for an HTTP step.
 
@@ -116,7 +116,7 @@ Click on 'Add new parameter' and choose 'Tweet text'. You could just type a mess
 
 <img src="screengrabs/14_10_body_of_http.JPG" alt="Dynamic content" width="75%">
 
-Add dynamic content and select the 'body' of your HTTP action. Remember how we gave it a sensible name above? Well that is now the name you are looking for. Click 'show more' next to it and choose 'Body'. Remember how the _body_ is what we set in the Function and we _get_ that _body_ in the HTTP action.
+Add dynamic content and select the 'body' of your HTTP action. Remember how we gave it a sensible name above? Well that is now the name you are looking for. Click 'show more' next to it and choose 'Body'. Remember how the _body_ is what we set in the Function code, and now we _get_ that _body_ in the HTTP action and pass it to the text of the Tweet.
 
 <img src="screengrabs/14_11_ready.JPG" alt="Ready!" width="75%">
 
@@ -163,6 +163,6 @@ We have made a small code change before. When we did this we had to check the co
 
 2. It makes is hard to work as a team. As we all know _Teamwork makes the dream work_. We want to enable multiple developers to collaborate through source control on the code of our Functions.
 
-3. DevOps is cool, we want some of that. We don't have it right now. We want, what is known as, CI/CD (Continuous Integration/Continuous Deployment). This is where any code change is integrated into the overall system and deployed as quickly as possible.
+3. DevOps is cool, we want some of that. We don't have it right now. We want, what is known as, CI/CD (Continuous Integration/Continuous Deployment). This is where any code change is integrated into the overall system and deployed as quickly as possible with automation.
 
 Lets learn how in [Step 6](STEP6.md).
