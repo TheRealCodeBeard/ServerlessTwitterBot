@@ -185,11 +185,12 @@ _Commit that change_ and then sync the repository with GitHub.
 
 <img src="screengrabs/19_2_workflow_out_of_sync.JPG" alt="Success" width="50%">
 
-Go to GitHub and watch the action complete.
-Then load your function via the URL as we did before.
+Go to GitHub and watch the workflow trigger, run & complete.  
+
+Then check your function output via the URL as we did before.
 
 <img src="screengrabs/19_4_new_web.JPG" alt="Success" width="75%">
 
-You should see that it now shows the Date and Time.
+You should see that it now shows the date and time.
 
 When you are ready, move on to [Step 7](STEP7.md) to reactivate the Logic App!
