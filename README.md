@@ -12,7 +12,7 @@ We are looking to create this...
 
 ## Who is this for?
 
-### Primary Audience 
+### Primary Audience
 Those with some development experience. You have an idea about what Serverless is and that Continuous Integration/Continuous Deployment is useful in the overall code workflow. You are interested in how modern low-code/no-code solutions can be set up in a cloud native way to accelerate the delivery of ideas to production. You would rather not write boilerplate code for auth and glue.
 
 For this audience, this walk through will be 'straightforward' but will give you a thin slice through the full stack to a live result.
@@ -41,27 +41,29 @@ To be able to build along with this tutorial you will need.
 The **Visual Studio Code Azure Functions Extension** ([find out more](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)).
  and **Azure Functions core tools** ([find out more](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local)) will also be required but we'll set the these up in [step 2](STEP2.md) below
 
+> At the time of writing, Azure Functions support either node.js v8.x or 10.x.  If you are installing node then go with 10.x. If you have 12.x installed then you should be absolutely fine for this lab. If you have an odd numbered version (e.g. 13.x) then you will have issues as non-LTS versions are not supported by the Azure Functions extension. ([Node.js release schedule](https://github.com/nodejs/Release).)
+
 ## Steps
 
-1. **Set up GitHub Repo** ([details](STEP1.md)). 
+1. **Set up GitHub Repo** ([details](STEP1.md)).
 
-    This is the repository for the project. It is where the code will be stored but also where the CI/CD GitHub actions will run. 
+    This is the repository for the project. It is where the code will be stored but also where the CI/CD GitHub actions will run.
 
-2. **Install the Functions Extension for VSCode** ([details](STEP2.md)). 
+2. **Install the Functions Extension for VSCode** ([details](STEP2.md)).
 
     This extension allows you to easily work with Azure Functions from within VSCode.
 
 3. **Create the Function locally** ([details](STEP3.md)). In this step we learn how we can test everything works without having to use the cloud. It shortens the development cycle feedback loop.
 
-4. **Push the Function to Azure** ([details](STEP4.md)). 
+4. **Push the Function to Azure** ([details](STEP4.md)).
 
     In this step we make the function live so it can be used by the Logic App.
 
-5. **Build the Logic App** ([details](STEP5.md)). 
+5. **Build the Logic App** ([details](STEP5.md)).
 
     In this step we learn how to use Logic App to automate the calling of our Function without code.
 
-6. **Set up a GitHub Action** ([details](STEP6.md)). 
+6. **Set up a GitHub Action** ([details](STEP6.md)).
 
     In this step we learn how to set up a GitHub action in our repo from step 1 to automate the release of our code.
 
