@@ -73,7 +73,9 @@ When you are ready, move on to [Step 2](STEP2.md)
 
 ## Alternatively...
 
-If you are often creating GitHub repos in Linux then repeating these steps quickly becomes laborious. Create a [personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) and add Rich Cheney's [github init](https://github.com/richeney/github-init) function into your ~/.bashrc file, and then you could get to the same point in just a few CLI commands. For example:
+If you are often creating GitHub repos in Linux then you'll find that repeating these steps quickly becomes laborious. If that is you then read on!
+
+Create a [personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) and add Rich Cheney's [github init](https://github.com/richeney/github-init) function into your ~/.bashrc file, and then you could get to the same point in just a few CLI commands. For example:
 
 1. Create the local repo directory
 
@@ -90,7 +92,6 @@ If you are often creating GitHub repos in Linux then repeating these steps quick
     A Twitter Bot Repo
 
     EOF
-    github init
     ```
 
 1. Initialise the local repo and push up to new GitHub repo
