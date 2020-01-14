@@ -53,7 +53,9 @@ The **Visual Studio Code Azure Functions Extension** ([find out more](https://ma
 
     This extension allows you to easily work with Azure Functions from within VSCode.
 
-3. **Create the Function locally** ([details](STEP3.md)). In this step we learn how we can test everything works without having to use the cloud. It shortens the development cycle feedback loop.
+3. **Create the Function locally** ([details](STEP3.md)). 
+
+    In this step we learn how we can test everything works without having to use the cloud. It shortens the development cycle feedback loop.
 
 4. **Push the Function to Azure** ([details](STEP4.md)).
 
