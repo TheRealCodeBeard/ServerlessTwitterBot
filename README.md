@@ -2,7 +2,7 @@
 Code along instructions for building 'My first Twitter bot with Azure Serverless and GitHub Actions'.
 
 ## What this is for.
-The focus of this walk through is to guide you through the process of setting up a Twitter bot with Azure Serverless and GitHub actions from a _standing start_ to full 'Continuous Delivery' (CD). Because the focus is on CD we will start with setting up the code repository in GitHub. We will then move on to creating the Azure Function in code making sure we have everything connected to Azure. We will then test the Logic App for posting to Twitter and then create the CD Action in GitHub. At the end you will have a foundation for which to continue on to either build out the Twitter Bot or use a CD methodology on future projects with Azure Functions and GitHub actions.
+The focus of this walk through is to guide you through the process of setting up a Twitter bot with Azure Serverless and GitHub actions from a _standing start_ to full 'Continuous Delivery' (CD). Because the focus is on CD we will start with setting up the code repository in GitHub. We will then move on to creating the Azure Function in code making sure we have everything connected to Azure. We will then test the Logic App for posting to Twitter and then create the automated CD workflow in GitHub. At the end you will have a foundation for which to continue on to either build out the Twitter Bot or use a CD methodology on future projects with Azure Functions and GitHub actions.  
 
 ## Architecture
 
@@ -29,12 +29,17 @@ For this audience, this walk through will be 'hard' because there are a lot of c
 To be able to build along with this tutorial you will need.
 
 1. **An Azure account** ([find out more](https://azure.microsoft.com/)). This walk through expects some level of Azure experience. While I have given a lot of detail and screen grabs of the various stages your experience will help you move through much quicker. If you are setting up a Free Azure account for the first time you may wish to do some general tutorials first to understand how the portal works and some base terminology (for example, 'resource' and 'resource group').
+
 2. **A GitHub account** ([find out more](https://github.com/)). It is very straightforward to set up a Github account but the concepts of source control are only covered in passing in this walk through. I hope to have covered 'what you need' here but you may wish to explore other learning materials, like [First Day On GitHub](https://lab.github.com/githubtraining/paths/first-day-on-github) if you want more context.
+
 3. **A Twitter account** ([find out more](https://twitter.com)). You can use your personal Twitter account if you want to. To create a new Twitter account will require it's own associated email address. If you don't have a second account you could look at signing up for one at [Outlook.com](https://outlook.com/)
+   
 4. **Visual Studio Code** ([find out more](https://code.visualstudio.com/)).
-5. **Visual Studio Code Azure Functions Extension** ([find out more](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)).
-6. **Azure Functions core tools** ([find out more](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local)).
-7. **Node.js** ([find out more](https://nodejs.org/)). This walk through can be completed with any language that Azure Functions supports but I will be using Node.js because JavaScript is my favourite. There is extremely minimal actual code in the main body of this walk through. So if you are not a confident coder, never fear!
+
+5. **Node.js** ([find out more](https://nodejs.org/)). This walk through can be completed with any language that Azure Functions supports but I will be using Node.js because JavaScript is my favourite. There is extremely minimal actual code in the main body of this walk through. So if you are not a confident coder, never fear!
+
+The **Visual Studio Code Azure Functions Extension** ([find out more](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)).
+ and **Azure Functions core tools** ([find out more](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local)) will also be required but we'll set the these up in [step 2](STEP2.md) below
 
 > At the time of writing, Azure Functions support either node.js v8.x or 10.x.  If you are installing node then go with 10.x. If you have 12.x installed then you should be absolutely fine for this lab. If you have an odd numbered version (e.g. 13.x) then you will have issues as non-LTS versions are not supported by the Azure Functions extension. ([Node.js release schedule](https://github.com/nodejs/Release).)
 

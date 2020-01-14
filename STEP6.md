@@ -27,7 +27,9 @@ In Azure click the Cloud Shell button in the top bar of the portal (next to the 
 
 <img src="screengrabs/17_1_cloud_shell.JPG" alt="Cloud SHell" width="50%">
 
-Click this button and Cloud Shell will load at the bottom of the portal window. When this has finished you will end up with a cursor on a command line.
+Click this button and Cloud Shell will load at the bottom of the portal window. When this has finished you will end up with a cursor on a command line. 
+
+> Note. If this is the first time using the Azure Cloud Shell you will be prompted to create or select a storage account to use, if any any doubt simply take the defaults. Should you want more options, Azure docs has [more information on this subject](https://docs.microsoft.com/en-us/azure/cloud-shell/persisting-shell-storage)
 
 There are detailed instructions on the [GitHub page relating to Service Principals](https://github.com/Azure/functions-action#using-azure-service-principle-for-rbac-as-deployment-credential). That you can read up on further should you wish to.
 
@@ -41,7 +43,7 @@ az ad sp create-for-rbac --name "myApp" --role contributor \
 
 This is a 'one line' command. But for ease it has been split over several lines with the \ character. What is going on in this command and what do you have to fill in?
 
-`az` is the Azure Command Line administrative application.
+`az` is the Azure Command Line administrative application (aka 'the Azure CLI'). 
 
 `ad` is the Active Directory command. Active Directory is the identity provider for Azure.
 
@@ -67,13 +69,13 @@ In each case you need to replace the whole section including the '{}'.
 
 <img src="screengrabs/17_1_function_app_name.JPG" alt="URL name" width="75%">
 
-The app name is the sub domain of this URL. The sub domain is the section between the '//' and the next '.'. In this case `nonsensegeneratorfunctionapp`. You will notice this is the name you gave for the Function App in lowercase and URL safe.
+The app name is the sub domain of this URL. The sub domain is the section between the `//` and the `.azurewebsites` part. In this case `nonsensegeneratorfunctionapp`. You will notice this is the name you gave for the Function App in lowercase and URL safe.
 
-`--sdk-auth` means that the command line app is authenticated via SDK with the credentials you are logged into the portal with.
+`--sdk-auth` means output the result in a format that is compatible with Azure SDKs, in essence you get a chunk of JSON as the output.
 
-When you have filled in all those details (you may want to do this in Notepad or VSCode) you will need to copy this and paste it into the cloud shell. Pasting in the command should run it automatically. If it doesn't, hit return to execute.
+When you have filled in all those details (you may want to build the command up in Notepad or VSCode) you will need to copy this and paste it into the cloud shell. Pasting in the command should run it automatically. If it doesn't, hit return to execute. 
 
-You will end up with a block of JSON that looks like this will the `<GUID>` sections filled in.
+You will end up with a block of JSON that looks like this, with the `<GUID>` sections filled in.
 
 ```json
   {
@@ -89,17 +91,17 @@ The `(...)` section represents some extra lines that provide various URLs and En
 
 Copy the whole JSON object.
 
-> For those of you who like to script then you could make use of [JMESPATH](https://azurecitadel.com/prereqs/cli/cli-3-jmespath/) queries:
+> Optional. For those of you who are a little more comfortable with the command line and bash, then you could make use of [JMESPATH](https://azurecitadel.com/prereqs/cli/cli-3-jmespath/) queries. This will save you manually building the id of the Function App in your command:
 >
 > ```bash
-> funcname="NonsenseGeneratorFunctionApp"
+> funcname="Change_To_Your_Function_App_Name"
 > funcid=$(az functionapp list --query "[?name == '"$funcname"'].id" --output tsv)
 > az ad sp create-for-rbac --name "http://$funcname" --role Contributor --scopes $funcid --sdk-auth
 > ```
 
 ## Putting the Secret in GitHub
 
-In your GitHub repository go to the Settings tab and Secrets section.
+In your GitHub repository go to the 'Settings' tab and 'Secrets' section.
 
 <img src="screengrabs/17_2_where_to_put_secret.JPG" alt="Secret vault" width="75%">
 
@@ -125,27 +127,29 @@ GitHub helpfully presents a collection of standard workflow templates for you to
 
 You can find the workflow.yml file in this repo. [workflow.yml](workflow.yml). There are a few pieces of this you will need to update to relate to your functions app.
 
-You can copy and paste the workflow.yml file linked above into the Edit new file window GitHub will be showing after clicking the 'Set up a workflow yourself' button above. You will see that in the path section we are in the .github/workflows folder editing a file called 'main.yml'. GitHub has helpfully put the file in the right place for us!
+After clicking the 'Set up a workflow yourself' button, GitHub will be showing a 'Edit new file' editor. Copy and paste the entire `workflow.yml` file into the editor replacing everything currently there.
+
+You will see that in the path section we are in the `.github/workflows` folder editing a file called `main.yml`. GitHub has helpfully put the file in the right place for us!
 
 <img src="screengrabs/18_2_commit_workflow_file.JPG" alt="Editing" width="75%">
 
 Before you commit this file and, basically, make your action live, you will need to make the following changes:
 
-`name:` at the top. Give your action a sensible name.
+`name:` at the top. Give your workflow a sensible name.
 
 The next part can be read as a sentence 'on push branches master'. This is when your action will trigger.
 
-`FUNC_APP_NAME:` you need to set this to be the Function App Name. This is the same as we used in the Service Principal. The URL safe version of the name of the Function App we created.
+`FUNC_APP_NAME:` you need to set this to be your Function App Name. This is the same as we used in the Service Principal. The URL safe version of the name of the Function App we created.
 
-The jobs section is all related to what we want the action to do. It's very human readable and means what it says.
+The jobs section is all related to what we want the workflow to do. It's very human readable and means what it says.
 
 'runs on windows latest' for example.
 
-'steps' are the things the action will do.
+'steps' are the tasks the workflow will carry out.
 
-- Check out master
-- Log in to azure. Notice here how `creds` is set to `${{ secrets.AZURE_CREDENTIALS_WIN }}`. This is how, in an Actions YAML file you refer to the secret created earlier. If you changed the Secret name, you will need to update that here.
-- Set node version. Remember how we chose Node 10.x when we set up the Function App originally? Well, this version must match!
+- Check out master branch
+- Log in to Azure. Notice here how `creds` is set to `${{ secrets.AZURE_CREDENTIALS_WIN }}`. This is how, in an Actions YAML file you refer to the secret created earlier. If you changed the secret name, you will need to update that here.
+- Set Node version. Remember how we chose Node 10.x when we set up the Function App originally? Well, this version must match!
 - NPM Install and build. This contains a set of commands for the Node Package Manager (NPM) to make sure all of our dependencies are used. In our simple case we don't have any dependencies ... so that is OK then.
 - The last step the `FUNC_APP_NAME` we set above to tell the Action which function app we are deploying too.
 
@@ -153,11 +157,11 @@ So as long as you have set up your Function App Name and Secret correctly, that 
 
 Click the 'Start commit' button and fill in your commit message and push. (Yes, in the GitHub portal).
 
-Because you just pushed a commit, the Action will run.
+Because you just pushed a commit, the Action will run. You will need to click on the 'Actions' tab in GitHub in order to see it running.
 
-<img src="screengrabs/18_4_workflow_running_post_commit.JPG" alt="Running" width="75%">
+<img src="screengrabs/18_4_workflow_running_post_commit.JPG" alt="Running" width="85%">
 
-Wait and see what happens, it should succeed. You should see the steps that were laid out in the YAML file we just created.
+Wait and see what happens, it should succeed. If you click on the workflow name, you should see the steps that were laid out in the YAML file we just created.
 
 <img src="screengrabs/18_6_success.JPG" alt="Success" width="50%">
 
@@ -168,7 +172,7 @@ Before we check in we need to make sure that the tweet is 'unique'. I am going t
 ```javascript
 module.exports = async function (context, req) {
     context.log('Generating Nonsense...');
-    let now =new Date();
+    let now = new Date();
     context.res = {
         body: "The date & time now is: " + now.toISOString() + "T" + now.toTimeString()
     };
@@ -181,11 +185,12 @@ _Commit that change_ and then sync the repository with GitHub.
 
 <img src="screengrabs/19_2_workflow_out_of_sync.JPG" alt="Success" width="50%">
 
-Go to GitHub and watch the action complete.
-Then load your function via the URL as we did before.
+Go to GitHub and watch the workflow trigger, run & complete.  
+
+Then check your function output via the URL as we did before.
 
 <img src="screengrabs/19_4_new_web.JPG" alt="Success" width="75%">
 
-You should see that it now shows the Date and Time.
+You should see that it now shows the date and time.
 
 When you are ready, move on to [Step 7](STEP7.md) to reactivate the Logic App!

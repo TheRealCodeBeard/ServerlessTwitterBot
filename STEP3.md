@@ -5,8 +5,7 @@
 Before we send our Functions to the cloud we are going to create them locally. In a normal 'production code' scenario there is a lot more testing and rigour needed than that we will do today. This tutorial will give you the overall idea and help you integrate these steps into your normal workflow.
 
 ## TL;DR
-
-- Create the default Azure function locally.
+- Create a HTTP triggered Azure function locally.
 - Check that it runs locally.
 - Check in the code to the repo.
 
@@ -34,7 +33,7 @@ If you can't see this. Mouse over the 'FUNCTIONS' panel and it should appear.
 
 Next you will be taken through the steps to set up the projects. Remember this is being created locally so you won't be asked any Azure related questions yet.
 
-The first step is to choose the repo folder that we set up in [Step 1](STEP1.md).
+The first step is to choose the repo folder that we set up in [Step 1](STEP1.md), i.e. the folder we currently have open in VS Code.
 
 <img src="screengrabs/07_1_choose_your_repo_folder.JPG" alt="Choose repo folder" width="50%">
 
@@ -46,7 +45,7 @@ The next choice is the type of trigger you want for your Function. If you want t
 
 <img src="screengrabs/07_3_choose_HTTP_trigger.JPG" alt="HTTP Trigger" width="50%">
 
-You will now be asked to give your function a name. This will default to the type of trigger you used. It is at this point that you should give the function a sensible name that tells you something about what it does.
+You will now be asked to give your function a name. This will default to the type of trigger you used. It is at this point that you should give the function a sensible name that tells you something about what it does. Here I picked "GenerateNonsense"
 
 <img src="screengrabs/07_4_give_sensible_name.JPG" alt="Sensible Name" width="50%">
 
@@ -68,9 +67,9 @@ The folder structure should look something like this.
 
 <img src="screengrabs/08_2_FolderStructure.JPG" alt="Folder Structure" width="50%">
 
-You will see how many .json settings files have been generated along with the package.json file, the overwritten `.gitignore`. The only file you really need to worry about is index.js that is where our minimal code will go. The default file expects name=foo in the GET parameters or POST body. Remember that when testing.
+You will see that many `.json` settings files have been generated along with the `package.json` file, the overwritten `.gitignore`. The only file you really need to worry about is `index.js` which is where our minimal code will go. The default code expects `name=foo` in the GET parameters or POST body. Remember that when testing.
 
-You can now run in Debug mode (as long as you have the Core Tools installed). This can be done with F5 or the Debug menu. A load of stuff will be spewed out on to the command line in the Terminal window when you do that. The line you are looking for is this...
+You can now run in Debug mode (as long as you have the Core Tools installed). This can be done by pressing **F5** or the from the Debug menu in VS Code <img src="screengrabs/Step3_debug-icon.png" width="30px">. A load of stuff will be spewed out on to the command line in the Terminal window when you do that. The line you are looking for is this...
 
 <img src="screengrabs/09_2_f5_debug_run.JPG" alt="Web address" width="50%">
 
@@ -86,4 +85,4 @@ Go to the source control <img src="screengrabs/05_Changes.JPG" alt="Changes made
 
 <img src="screengrabs/10_1_check_in.JPG" alt="Changes" width="50%">
 
-Feel free to sync these changes if you like. You are then ready to go on to [Step 4](STEP4.md)
+Feel free to sync (i.e. push to GitHub) these changes if you like. You are then ready to go on to [Step 4](STEP4.md)

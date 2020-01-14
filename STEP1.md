@@ -19,21 +19,21 @@ In this step you will create a GitHub repository (repo), open it in Visual Studi
 
 In your GitHub account click 'New'. At the time of writing it looks like this.
 
-<img src="screengrabs/00_create_a_repo.JPG" alt="create new repository" width="50%" />
+<img src="screengrabs/00_create_a_repo.JPG" alt="create new repository" width="70%" />
 
 You will then be presented with a form to fill out. I am initialising here with a Node .gitignore file as we will be writing in Node for this project. I have also asked for a README file. Everyone loves documentation!
 
-<img src="screengrabs/01_create_a_repo.JPG" alt="create new repository" width="50%" />
+<img src="screengrabs/01_create_a_repo.JPG" alt="create new repository" width="67%" />
 
 You will end up with a vanilla repo that looks like this
 
-<img src="screengrabs/02_the_repo.JPG" alt="the repository" width="50%" />
+<img src="screengrabs/02_the_repo.JPG" alt="the repository" width="60%" />
 
 Clicking on the 'Clone or download' button will give you the various options for getting the repo linked locally.
 
-<img src="screengrabs/03_clone_local.JPG" alt="clone locally" width="30%" />
+<img src="screengrabs/03_clone_local.JPG" alt="clone locally" width="40%" />
 
-You can clone local via the command line if you wish, I use GitHub Desktop because it's super easy. Clicking 'Open in Desktop' will make your browser try and open GitHub Desktop and this will result in this dialog.
+You can clone local via the command line if you wish (using the `git clone` command), I use GitHub Desktop because it's super easy. Clicking 'Open in Desktop' will make your browser try and open GitHub Desktop and this will result in this dialog.
 
 <img src="screengrabs/04_github_desktop_clone.JPG" alt="GitHub Desktop Clone Local" width="50%" />
 
@@ -41,11 +41,11 @@ Choose where you want to work and click 'Clone'. Once you have done this you can
 
 ## Open the repo in VS Code
 
-In Visual Studio Code choose Open Folder and navigate to the folder of the cloned repo.
+In Visual Studio Code choose 'Open Folder' from the 'File' menu and navigate to the folder of the cloned repo. If you have cloned the repo at the command line you can simply run `code <cloned-output-directory>` to open it in VS Code
 
 <img src="screengrabs/05_open_in_vs_code.JPG" alt="GitHub Desktop Clone Local" width="30%" />
 
-Make a change to the README.md file (remember this will be public). This can be anything. "Doing an amazing tutorial and had to make a change" would be an example of what you could right. When you have done this change and saved it on the VS Code side panel you will a number on the source control section.
+Make a change to the README.md file (remember this will be public). This can be anything. "Doing an amazing tutorial and had to make a change" would be an example of what you could right. When you have done this change and saved it on the VS Code side panel you will a number on the source control section (it might show a '1' rather than a '2' shown here).
 
 <img src="screengrabs/05_Changes.JPG" alt="Changes made" width="30%" />
 
@@ -53,9 +53,9 @@ Clicking on it brings up the source control panel
 
 <img src="screengrabs/05_2_Changes.JPG" alt="Source control" width="30%" />
 
-Use the command line if you like but you can also commit here. Click the plus next to the files you want to add to the commit (or click the plus next to CHANGES to add them all)
+Use the command line if you like but you can also commit here. Click the plus next to the files you want to add to the commit (or click the plus next to CHANGES to add them all). This is called "staging" the files.
 
-Then add a commit message and click the tick.
+Then add a commit message, this can be anything but keep in mind it will be public and it's there to help you and others understand what has been changed. A good guide is to try to complete this sentence "If applied, this commit will *{your commit message}*". After entering a message, click the 'tick'.
 
 <img src="screengrabs/05_3_Ready_to_commit.JPG" alt="Ready to commit" width="30%" />
 
@@ -63,11 +63,11 @@ On the bottom bar you will see the sync button showing how far you are ahead of 
 
 <img src="screengrabs/04_VS_Code_Sync_Button.JPG" alt="Ready to commit" width="30%" />
 
-Click the two arrows in a circle next to the numbers and your code changes will be made available in the cloud version of the repo.
+Click the two arrows in a circle next to the numbers and your code changes will be made available in the version of the repo hosted in GitHub.
 
 ## Check it is all there
 
-Navigate back to your repo in your browser and refresh the page. You should see the changes you made above reflected in the README.md file here.
+Navigate back to your repo in your browser and refresh the page. You should see the changes you made above reflected in the **README<span></span>.md** file here. 
 
 When you are ready, move on to [Step 2](STEP2.md)
 
