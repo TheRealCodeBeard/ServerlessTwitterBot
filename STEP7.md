@@ -29,6 +29,14 @@ When that has run (it should succeed) navigate to the Twitter account you are tw
 
 **SUCCESS!** You now have a fully CI/CD Node.js based Twitter bot!
 
+## What have we learned here?
+
+The goal of this tutorial was to take you through a project using Azure Serverless (Functions and Logic Apps) using Visual Studio Code which produced a real world result (A Twitter Bot) that was released through a CI/CD process using GitHub Actions.
+
+In Step 1 we covered the basics of setting up a code repository in GitHub. Step 2 to Step 4 took you through the process of using the Visual Studio Code Extensions to build an Azure Function and commit the code to your GitHub repository. In Step 5 we built a Logic App and learnt about a failure case specific to Twitter. Finally, in Steps 6 and 7 we learnt how to set up our CI/CD process and release the new code by just syncing our code changes.
+
+I hope you enjoyed this process and can use it as a springboard to your own projects both for fun and profit!
+
 ---------------------------------------------------------------------------------------
 
 ## THE MAIN WALK THROUGH FINISHES HERE WHAT FOLLOWS ARE EXTENSIONS AND STRETCH PROJECTS
