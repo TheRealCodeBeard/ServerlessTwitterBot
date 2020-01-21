@@ -72,3 +72,9 @@ The **Visual Studio Code Azure Functions Extension** ([find out more](https://ma
 7. **Live Twitter Bot!** ([details](STEP7.md)).
 
     Reactivate your logic app and generate unique tweets!
+
+## Teardown
+
+If you want to know how to delete all the things you created in Azure there is a  ([teardown guide](Teardown.md)) here.
+
+Have a lovely day! 
