@@ -99,6 +99,8 @@ Copy the whole JSON object.
 > az ad sp create-for-rbac --name "http://$funcname" --role Contributor --scopes $funcid --sdk-auth
 > ```
 
+**NOTE** In the above the Function App Name is case sensitive. 
+
 ## Putting the Secret in GitHub
 
 In your GitHub repository go to the 'Settings' tab and 'Secrets' section.
