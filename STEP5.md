@@ -24,8 +24,7 @@ In this step we will create a Logic App. A Logic App is a low code / no code ser
 
 ## Create the Logic App
 
-Over in the Azure portal, go to your resource group (the one created in [Step 4](STEP4.md)) and click the '+ Add' button in the top bar of the Overview panel. 
-Go to your resource group (the one created in [Step 4](STEP4.md)) and click the '+ Add' button in the top bar of the Overview panel.
+Over in the Azure portal, go to your resource group (the one created in [Step 4](STEP4.md)) and click the '+ Add' button in the top bar of the Overview panel.
 
 In the 'Search the Marketplace' bar at the top of the 'New' panel type `Logic App` and click the matching search result. You will then be presented with a page with this at the top.
 
